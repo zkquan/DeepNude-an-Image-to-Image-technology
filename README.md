@@ -2,6 +2,10 @@
 
 **After researching DeepNude technology, I have removed data related to DeepNude. Please don't ask me to get DeepNude.**
 
+Next I will open up some image/text/random-to-image neural network models for learning and communication, and welcome to share your technical solutions.
+
+接下来我会开源一些image/text/random-to-image的神经网络模型，仅供学习交流之用，也欢迎分享你的技术解决方案。
+
 ## DeepNude's technology stack
 
 ![](DeepNude_images/DeepNode_0.png)
@@ -10,9 +14,9 @@
 + [pytorch](https://pytorch.org/)
 + Deep learning computer vision
 
-## Deep learning computer vision(guess)
+## Deep learning computer vision (guess)
 
-### Image Inpainting 图像修复
+### 1. Image Inpainting 图像修复
 You can refer to the NVIDIA papers [Image Inpainting for Irregular Holes Using Partial Convolutions](https://arxiv.org/abs/1804.07723) and [Partial Convolution based Padding](https://arxiv.org/abs/1811.11718).
 
 Paper code [partialconv](https://github.com/NVIDIA/partialconv)。
@@ -26,7 +30,7 @@ The study was based on a team from Nvidia's Guilin Liu et al. who published a de
 该研究来自Nvidia的Guilin Liu等人的团队，他们发布了一种可以编辑图像或重建已损坏图像的深度学习方法，即使图像穿了个洞或丢失了像素。这是目前2018 state-of-the-art的方法。
 
 
-### Pix2Pix (need for paired train data)
+### 2. Pix2Pix (need for paired train data)
 You can refer to the paper [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/abs/1611.07004)
 
 Below is the output generated after training the Pix2Pix model for 200 epochs.
@@ -35,7 +39,9 @@ Below is the output generated after training the Pix2Pix model for 200 epochs.
 
 Learn more and hands on [pix2pix.ipynb](https://github.com/tensorflow/docs/blob/master/site/en/r2/tutorials/generative/pix2pix.ipynb) or [pix2pix-keras](https://github.com/williamFalcon/pix2pix-keras).
 
-### CycleGAN (without the need for paired train data)
+
+
+### 3. CycleGAN (without the need for paired train data)
 CycleGAN uses a cycle consistency loss to enable training without the need for paired data. In other words, it can translate from one domain to another without a one-to-one mapping between the source and target domain.
 This opens up the possibility to do a lot of interesting tasks like photo-enhancement, image colorization, style transfer, etc. All you need is the source and the target dataset.
 
@@ -62,9 +68,13 @@ Delete the color.cp36-win_amd64.pyd file in the deepnude root directory, and the
 
 ## What can be improved?
 
+**DeepNude software shortcomings**
+
 1. Size. Including 156M DeepNude_Windows_v2.0.0.zip and 1.90G pyqtlib.rar;
 2. Speed. It takes 30 seconds to convert a picture;
 3. Content. Use the Image-to-Image neural network to automatically remove the clothes from women to reveal their nudity. This application applies the wrong application of deep learning.
+
+**Where DeepNude can be improved**
 
 + DeepNude can be implemented using Tensorflow and uses model compression techniques. 
 + DeepNude should change the current practice of not respecting women.
@@ -73,14 +83,19 @@ Delete the color.cp36-win_amd64.pyd file in the deepnude root directory, and the
 
 In fact, we don't need Image-to-Image. We can use [GANs](https://arxiv.org/abs/1406.2661) to generate images directly from random values or generate images from text.
 
-### [Obj-GAN](https://github.com/jamesli1618/Obj-GAN) and [StoryGAN](https://github.com/yitong91/StoryGAN)
-微软人工智能研究院（Microsoft Research AI）开发的新 AI 技术可以理解自然语言描述、绘制草图、合成图像，然后根据草图框架和文字提供的个别单词细化细节。换句话说，这个网络可以根据描述日常场景的文字描述生成同样场景的图像。
+### 1. [Obj-GAN](https://github.com/jamesli1618/Obj-GAN) 
+The new AI technology Obj-GAN developed by Microsoft Research AI understands natural language descriptions, sketches, composite images, and then refines the details based on individual words provided by sketch frames and text. In other words, the network can generate images of the same scene based on textual descriptions that describe everyday scenes.
+
+微软人工智能研究院（Microsoft Research AI）开发的新 AI 技术Obj-GAN可以理解自然语言描述、绘制草图、合成图像，然后根据草图框架和文字提供的个别单词细化细节。换句话说，这个网络可以根据描述日常场景的文字描述生成同样场景的图像。
 
 ![](https://raw.githubusercontent.com/jamesli1618/Obj-GAN/master/step_vis.png)
 
 ![](https://raw.githubusercontent.com/jamesli1618/Obj-GAN/master/framework.png)
 
+
+### 2. [StoryGAN](https://github.com/yitong91/StoryGAN)
 [Advanced version of the pen: just one sentence, one story, you can generate a picture](https://www.microsoft.com/en-us/research/blog/a-picture-from-a-dozen-words-a-drawing-bot-for-realizing-everyday-scenes-and-even-stories/).
+> Microsoft's new research proposes a new GAN, ObjGAN, which can generate complex scenes based on textual descriptions. They also proposed another GAN, StoryGAN, which can draw a story. Enter the text of a story and output the "picture book".
 
 [进阶版神笔：只需一句话、一个故事，即可生成画面](https://www.jiqizhixin.com/articles/2019-06-29)
 > 微软新研究提出新型 GAN——ObjGAN，可根据文字描述生成复杂场景。他们还提出另一个可以画故事的 GAN——StoryGAN，输入一个故事的文本，即可输出「连环画」。
@@ -89,5 +104,6 @@ In fact, we don't need Image-to-Image. We can use [GANs](https://arxiv.org/abs/1
 ![](https://www.microsoft.com/en-us/research/uploads/prod/2019/06/drawing-bot-figure-3.png)
 
 
-**Expect those who are willing to use these technologies to benefit mankind**.
+**Researchers should work to improve human well-being, not to gain income through breaking the law.**.
 
+研究人员应该致力于提高人类福祉，而不是为了通过犯法来获取收益。
