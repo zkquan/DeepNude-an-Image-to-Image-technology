@@ -1,4 +1,5 @@
 # DeepNude-an-Image-to-Image-technology
+> Reprinted to indicate the source 转载注明出处 https://github.com/yuanxiaosc/DeepNude-an-Image-to-Image-technology
 
 **After researching DeepNude technology, I have removed data related to DeepNude. Please don't ask me to get DeepNude program.**
 
@@ -6,19 +7,15 @@ Next I will open up some image/text/random-to-image neural network models for le
 
 接下来我会开源一些image/text/random-to-image的神经网络模型，仅供学习交流之用，也欢迎分享你的技术解决方案。
 
-## [Image-to-Image Demo](https://affinelayer.com/pixsrv/) [图像到图像演示](https://affinelayer.com/pixsrv/)
+## [Image-to-Image Demo](https://affinelayer.com/pixsrv/) [图像到图像demo](https://affinelayer.com/pixsrv/)
 
 The DeepNude software mainly uses the Image-to-Image technology proposed in [Image Inpainting for Irregular Holes Using Partial Convolutions](https://arxiv.org/abs/1804.07723), which has many other applications, such as black and white. Convert a stick figure into a colorful color map. You can try Image-to-Image technology in your browser by clicking Image-to-Image Demo below.
 
-DeepNude 软件主要使用了[Image Inpainting for Irregular Holes Using Partial Convolutions](https://arxiv.org/abs/1804.07723) 中提出的Image-to-Image技术，该技术有很多其它的应用，比如把黑白的简笔画转换成色彩丰富的彩图，你可以点击下方的Image-to-Image Demo在浏览器中尝试Image-to-Image技术。
+DeepNude 软件主要使用了 [Image Inpainting for Irregular Holes Using Partial Convolutions](https://arxiv.org/abs/1804.07723) 中提出的Image-to-Image技术，该技术有很多其它的应用，比如把黑白的简笔画转换成色彩丰富的彩图，你可以点击下方的Image-to-Image Demo在浏览器中尝试Image-to-Image技术。
 
 [Image-to-Image Demo](https://affinelayer.com/pixsrv/)
 
 An example of using this demo is as follows：
-
-一个使用该demo的例子如下：
-
-**edges2cats 简笔画到猫**
 
 ![](paper_images/edges2cats.png)
 
@@ -27,7 +24,7 @@ In the left side box, draw a cat as you imagine, and then click the pix 2 pix bu
 在左侧框中按照自己想象画一个简笔画的猫，再点击pix2pix按钮，就能输出一个模型生成的猫。
 
 
-## Deep learning computer vision
+## Deep Computer Vision in DeepNude
 
 ### 1. Image Inpainting 图像修复
 
@@ -35,6 +32,7 @@ In the left side box, draw a cat as you imagine, and then click the pix 2 pix bu
 + 代码 Paper code [partialconv](https://github.com/NVIDIA/partialconv)。
 
 **效果**
+
 ![](paper_images/2018_NVIDIA_Image_Inpainting.png)
 
 In the image interface of [Image_Inpainting(NVIDIA_2018).mp4](https://github.com/yuanxiaosc/DeepNude-an-Image-to-Image-technology/raw/master/Image_Inpainting(NVIDIA_2018).mp4) video, you only need to use tools to simply smear the unwanted content in the image. Even if the shape is very irregular, NVIDIA's model can “restore” the image with very realistic The picture fills the smeared blank. It can be described as a one-click P picture, and "no ps traces."
@@ -46,12 +44,15 @@ The study was based on a team from Nvidia's Guilin Liu et al. who published a de
 
 ### 2. Pix2Pix (need for paired train data)
 
+> DeepNude mainly uses this Pix2Pix technology.
+
 + 论文 Berkeley 2017 paper [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/abs/1611.07004).
 + 主页 homepage [Image-to-Image Translation with Conditional Adversarial Nets](https://phillipi.github.io/pix2pix/)
 + 代码 code [pix2pix](https://github.com/phillipi/pix2pix)
 + Run in Google Colab [pix2pix.ipynb](https://github.com/tensorflow/docs/blob/master/site/en/r2/tutorials/generative/pix2pix.ipynb)
 
 **效果**
+
 ![](paper_images/2017_Phillip_pix2pix_examples.jpg)
 
 [Image-to-Image Translation with Conditional Adversarial Networks] (https://arxiv.org/abs/1611.07004) is a general solution for the use of conditional confrontation networks as an image-to-image conversion problem proposed by the University of Berkeley.
@@ -66,6 +67,7 @@ The study was based on a team from Nvidia's Guilin Liu et al. who published a de
 + Run in Google Colab [cyclegan.ipynb](https://github.com/tensorflow/docs/blob/master/site/en/r2/tutorials/generative/cyclegan.ipynb)
 
 **效果**
+
 ![](paper_images/2017_Zhu_CycleGAN_examples.jpg)
 
 CycleGAN uses a cycle consistency loss to enable training without the need for paired data. In other words, it can translate from one domain to another without a one-to-one mapping between the source and target domain.
@@ -74,17 +76,18 @@ This opens up the possibility to do a lot of interesting tasks like photo-enhanc
 CycleGAN使用循环一致性损失函数来实现训练，而无需配对数据。 换句话说，它可以从一个域转换到另一个域，而无需在源域和目标域之间进行一对一映射。
 这开启了执行许多有趣任务的可能性，例如照片增强，图像着色，样式传输等。您只需要源和目标数据集。
 
+## DeepNude software itself
 
-## DeepNude's technology stack
+### DeepNude's technology stack
 
 ![](DeepNude_images/DeepNode_0.png)
 
 + [Python](https://www.python.org/) + PyQt 
 + [pytorch](https://pytorch.org/)
-+ Deep learning computer vision
++ Deep Computer Vision
 
 
-## Windows version of DeepNude use process
+### Windows version of DeepNude use process
 
 > DeepNude can really achieve the purpose of Image-to-Image, and the generated image is more realistic.
 
@@ -96,7 +99,7 @@ CycleGAN使用循环一致性损失函数来实现训练，而无需配对数据
 Delete the color.cp36-win_amd64.pyd file in the deepnude root directory, and then add the [color.py](color.py) file to get the advanced version of deepnude.
 
 
-## What can be improved?
+### What can be improved?
 
 **DeepNude software shortcomings**
 
@@ -115,17 +118,22 @@ Delete the color.cp36-win_amd64.pyd file in the deepnude root directory, and the
 In fact, we don't need Image-to-Image. We can use [GANs](https://arxiv.org/abs/1406.2661) to generate images directly from random values or generate images from text.
 
 ### 1. [Obj-GAN](https://github.com/jamesli1618/Obj-GAN) 
+
 The new AI technology Obj-GAN developed by Microsoft Research AI understands natural language descriptions, sketches, composite images, and then refines the details based on individual words provided by sketch frames and text. In other words, the network can generate images of the same scene based on textual descriptions that describe everyday scenes.
 
 微软人工智能研究院（Microsoft Research AI）开发的新 AI 技术Obj-GAN可以理解自然语言描述、绘制草图、合成图像，然后根据草图框架和文字提供的个别单词细化细节。换句话说，这个网络可以根据描述日常场景的文字描述生成同样场景的图像。
 
 **效果**
+
 ![](https://raw.githubusercontent.com/jamesli1618/Obj-GAN/master/step_vis.png)
+
 **模型**
+
 ![](https://raw.githubusercontent.com/jamesli1618/Obj-GAN/master/framework.png)
 
 
 ### 2. [StoryGAN](https://github.com/yitong91/StoryGAN)
+
 [Advanced version of the pen: just one sentence, one story, you can generate a picture](https://www.microsoft.com/en-us/research/blog/a-picture-from-a-dozen-words-a-drawing-bot-for-realizing-everyday-scenes-and-even-stories/).
 > Microsoft's new research proposes a new GAN, ObjGAN, which can generate complex scenes based on textual descriptions. They also proposed another GAN, StoryGAN, which can draw a story. Enter the text of a story and output the "picture book".
 
@@ -133,7 +141,9 @@ The new AI technology Obj-GAN developed by Microsoft Research AI understands nat
 > 微软新研究提出新型 GAN——ObjGAN，可根据文字描述生成复杂场景。他们还提出另一个可以画故事的 GAN——StoryGAN，输入一个故事的文本，即可输出「连环画」。
 
 当前最优的文本到图像生成模型可以基于单句描述生成逼真的鸟类图像。然而，文本到图像生成器远远不止仅对一个句子生成单个图像。给定一个多句段落，生成一系列图像，每个图像对应一个句子，完整地可视化整个故事。
+
 **效果**
+
 ![](https://www.microsoft.com/en-us/research/uploads/prod/2019/06/drawing-bot-figure-3.png)
 
 
@@ -141,4 +151,6 @@ The new AI technology Obj-GAN developed by Microsoft Research AI understands nat
 
 **Researchers should work to improve human well-being, not to gain income through breaking the law.**.
 
-研究人员应该致力于提高人类福祉，而不是为了通过犯法来获取收益。
+The most commonly used image-to-image technology should be Beauty App, so why don't we develop a smarter Beauty Camera?
+
+现在用得最多的Image-to-Image技术应该就是美颜APP了，所以我们为什么不开发一个更加智能的美颜相机呢？
