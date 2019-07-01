@@ -1,26 +1,40 @@
 # DeepNude-an-Image-to-Image-technology
 
-**After researching DeepNude technology, I have removed data related to DeepNude. Please don't ask me to get DeepNude.**
+**After researching DeepNude technology, I have removed data related to DeepNude. Please don't ask me to get DeepNude program.**
 
 Next I will open up some image/text/random-to-image neural network models for learning and communication, and welcome to share your technical solutions.
 
 接下来我会开源一些image/text/random-to-image的神经网络模型，仅供学习交流之用，也欢迎分享你的技术解决方案。
 
-## DeepNude's technology stack
+## [Image-to-Image Demo](https://affinelayer.com/pixsrv/) [图像到图像演示](https://affinelayer.com/pixsrv/)
 
-![](DeepNude_images/DeepNode_0.png)
+The DeepNude software mainly uses the Image-to-Image technology proposed in [Image Inpainting for Irregular Holes Using Partial Convolutions](https://arxiv.org/abs/1804.07723), which has many other applications, such as black and white. Convert a stick figure into a colorful color map. You can try Image-to-Image technology in your browser by clicking Image-to-Image Demo below.
 
-+ [Python](https://www.python.org/) + PyQt 
-+ [pytorch](https://pytorch.org/)
-+ Deep learning computer vision
+DeepNude 软件主要使用了[Image Inpainting for Irregular Holes Using Partial Convolutions](https://arxiv.org/abs/1804.07723) 中提出的Image-to-Image技术，该技术有很多其它的应用，比如把黑白的简笔画转换成色彩丰富的彩图，你可以点击下方的Image-to-Image Demo在浏览器中尝试Image-to-Image技术。
 
-## Deep learning computer vision (guess)
+[Image-to-Image Demo](https://affinelayer.com/pixsrv/)
+
+An example of using this demo is as follows：
+
+一个使用该demo的例子如下：
+
+**edges2cats 简笔画到猫**
+
+![](paper_images/edges2cats.png)
+
+In the left side box, draw a cat as you imagine, and then click the pix 2 pix button, you can output a model generated cat.
+
+在左侧框中按照自己想象画一个简笔画的猫，再点击pix2pix按钮，就能输出一个模型生成的猫。
+
+
+## Deep learning computer vision
 
 ### 1. Image Inpainting 图像修复
-You can refer to the NVIDIA papers [Image Inpainting for Irregular Holes Using Partial Convolutions](https://arxiv.org/abs/1804.07723) and [Partial Convolution based Padding](https://arxiv.org/abs/1811.11718).
 
-Paper code [partialconv](https://github.com/NVIDIA/partialconv)。
++ 论文 NVIDIA 2018 paper [Image Inpainting for Irregular Holes Using Partial Convolutions](https://arxiv.org/abs/1804.07723) and [Partial Convolution based Padding](https://arxiv.org/abs/1811.11718).
++ 代码 Paper code [partialconv](https://github.com/NVIDIA/partialconv)。
 
+**效果**
 ![](paper_images/2018_NVIDIA_Image_Inpainting.png)
 
 In the image interface of [Image_Inpainting(NVIDIA_2018).mp4](https://github.com/yuanxiaosc/DeepNude-an-Image-to-Image-technology/raw/master/Image_Inpainting(NVIDIA_2018).mp4) video, you only need to use tools to simply smear the unwanted content in the image. Even if the shape is very irregular, NVIDIA's model can “restore” the image with very realistic The picture fills the smeared blank. It can be described as a one-click P picture, and "no ps traces."
@@ -31,28 +45,43 @@ The study was based on a team from Nvidia's Guilin Liu et al. who published a de
 
 
 ### 2. Pix2Pix (need for paired train data)
-You can refer to the paper [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/abs/1611.07004)
 
-Below is the output generated after training the Pix2Pix model for 200 epochs.
++ 论文 Berkeley 2017 paper [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/abs/1611.07004).
++ 主页 homepage [Image-to-Image Translation with Conditional Adversarial Nets](https://phillipi.github.io/pix2pix/)
++ 代码 code [pix2pix](https://github.com/phillipi/pix2pix)
++ Run in Google Colab [pix2pix.ipynb](https://github.com/tensorflow/docs/blob/master/site/en/r2/tutorials/generative/pix2pix.ipynb)
 
-![](paper_images/pix2pix_1.png)
+**效果**
+![](paper_images/2017_Phillip_pix2pix_examples.jpg)
 
-Learn more and hands on [pix2pix.ipynb](https://github.com/tensorflow/docs/blob/master/site/en/r2/tutorials/generative/pix2pix.ipynb) or [pix2pix-keras](https://github.com/williamFalcon/pix2pix-keras).
+[Image-to-Image Translation with Conditional Adversarial Networks] (https://arxiv.org/abs/1611.07004) is a general solution for the use of conditional confrontation networks as an image-to-image conversion problem proposed by the University of Berkeley.
 
+[Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/abs/1611.07004) 是伯克利大学研究提出的使用条件对抗网络作为图像到图像转换问题的通用解决方案。
 
 
 ### 3. CycleGAN (without the need for paired train data)
+
++ 论文 Berkeley 2017 paper [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/abs/1703.10593)
++ 代码 code [CycleGAN](https://github.com/junyanz/CycleGAN)
++ Run in Google Colab [cyclegan.ipynb](https://github.com/tensorflow/docs/blob/master/site/en/r2/tutorials/generative/cyclegan.ipynb)
+
+**效果**
+![](paper_images/2017_Zhu_CycleGAN_examples.jpg)
+
 CycleGAN uses a cycle consistency loss to enable training without the need for paired data. In other words, it can translate from one domain to another without a one-to-one mapping between the source and target domain.
 This opens up the possibility to do a lot of interesting tasks like photo-enhancement, image colorization, style transfer, etc. All you need is the source and the target dataset.
 
 CycleGAN使用循环一致性损失函数来实现训练，而无需配对数据。 换句话说，它可以从一个域转换到另一个域，而无需在源域和目标域之间进行一对一映射。
 这开启了执行许多有趣任务的可能性，例如照片增强，图像着色，样式传输等。您只需要源和目标数据集。
 
-You can refer to the paper [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/abs/1703.10593)
 
-![](paper_images/2017_Zhu_CycleGAN.png)
+## DeepNude's technology stack
 
-Learn more and hands on [cyclegan.ipynb](https://github.com/tensorflow/docs/blob/master/site/en/r2/tutorials/generative/cyclegan.ipynb)
+![](DeepNude_images/DeepNode_0.png)
+
++ [Python](https://www.python.org/) + PyQt 
++ [pytorch](https://pytorch.org/)
++ Deep learning computer vision
 
 
 ## Windows version of DeepNude use process
@@ -66,6 +95,7 @@ Learn more and hands on [cyclegan.ipynb](https://github.com/tensorflow/docs/blob
 
 Delete the color.cp36-win_amd64.pyd file in the deepnude root directory, and then add the [color.py](color.py) file to get the advanced version of deepnude.
 
+
 ## What can be improved?
 
 **DeepNude software shortcomings**
@@ -76,8 +106,9 @@ Delete the color.cp36-win_amd64.pyd file in the deepnude root directory, and the
 
 **Where DeepNude can be improved**
 
-+ DeepNude can be implemented using Tensorflow and uses model compression techniques. 
++ DeepNude can be implemented using [Tensorflow](https://www.tensorflow.org/) and uses model compression techniques. 
 + DeepNude should change the current practice of not respecting women.
+
 
 ## Future
 
@@ -88,8 +119,9 @@ The new AI technology Obj-GAN developed by Microsoft Research AI understands nat
 
 微软人工智能研究院（Microsoft Research AI）开发的新 AI 技术Obj-GAN可以理解自然语言描述、绘制草图、合成图像，然后根据草图框架和文字提供的个别单词细化细节。换句话说，这个网络可以根据描述日常场景的文字描述生成同样场景的图像。
 
+**效果**
 ![](https://raw.githubusercontent.com/jamesli1618/Obj-GAN/master/step_vis.png)
-
+**模型**
 ![](https://raw.githubusercontent.com/jamesli1618/Obj-GAN/master/framework.png)
 
 
@@ -101,8 +133,11 @@ The new AI technology Obj-GAN developed by Microsoft Research AI understands nat
 > 微软新研究提出新型 GAN——ObjGAN，可根据文字描述生成复杂场景。他们还提出另一个可以画故事的 GAN——StoryGAN，输入一个故事的文本，即可输出「连环画」。
 
 当前最优的文本到图像生成模型可以基于单句描述生成逼真的鸟类图像。然而，文本到图像生成器远远不止仅对一个句子生成单个图像。给定一个多句段落，生成一系列图像，每个图像对应一个句子，完整地可视化整个故事。
+**效果**
 ![](https://www.microsoft.com/en-us/research/uploads/prod/2019/06/drawing-bot-figure-3.png)
 
+
+-----
 
 **Researchers should work to improve human well-being, not to gain income through breaking the law.**.
 
