@@ -1,30 +1,36 @@
 # DeepNude-an-Image-to-Image-technology
 > Reprinted to indicate the source 转载注明出处 https://github.com/yuanxiaosc/DeepNude-an-Image-to-Image-technology
 
-**After researching DeepNude technology, I have removed data related to DeepNude. Please don't ask me to get DeepNude program.**
+![](http://www.k4ai.com/content/images/2016/12/result-AB.gif)
+erasing image background 清除图像背景
 
-Next I will open up some image/text/random-to-image neural network models for learning and communication, and welcome to share your technical solutions.
+Next I will open up some image/text/random-to-image neural network models and utilities for learning and communication, and also welcome to share your technical solutions.
 
-接下来我会开源一些image/text/random-to-image的神经网络模型，仅供学习交流之用，也欢迎分享你的技术解决方案。
+接下来我会开源一些image/text/random-to-image的神经网络模型和实用工具，仅供学习交流之用，也欢迎分享你的技术解决方案。
 
 ## [Image-to-Image Demo](https://affinelayer.com/pixsrv/) [图像到图像demo](https://affinelayer.com/pixsrv/)
+> Stick figure to colorful cats/shoes/handbags demo 简笔画到色彩丰富的猫、鞋、手袋 demo
 
-The DeepNude software mainly uses the Image-to-Image technology proposed in [Image Inpainting for Irregular Holes Using Partial Convolutions](https://arxiv.org/abs/1804.07723), which has many other applications, such as black and white. Convert a stick figure into a colorful color map. You can try Image-to-Image technology in your browser by clicking Image-to-Image Demo below.
+DeepNude software mainly uses Image-to-Image technology, which theoretically converts the images you enter into any image you want. You can experience Image-to-Image technology in your browser by clicking Image-to-Image Demo below.
 
-DeepNude 软件主要使用了 [Image Inpainting for Irregular Holes Using Partial Convolutions](https://arxiv.org/abs/1804.07723) 中提出的Image-to-Image技术，该技术有很多其它的应用，比如把黑白的简笔画转换成色彩丰富的彩图，你可以点击下方的Image-to-Image Demo在浏览器中尝试Image-to-Image技术。
+DeepNude 软件主要使用了Image-to-Image技术，该技术理论上可以把你输入的图片转换成任何你想要的图片。你可以点击下方的Image-to-Image Demo在浏览器中体验Image-to-Image技术。
 
 [Image-to-Image Demo](https://affinelayer.com/pixsrv/)
 
 An example of using this demo is as follows：
 
-![](paper_images/edges2cats.png)
+![](paper_images/2017_Phillip_pix2pix_examples_edges2cats.png)
 
 In the left side box, draw a cat as you imagine, and then click the pix 2 pix button, you can output a model generated cat.
 
 在左侧框中按照自己想象画一个简笔画的猫，再点击pix2pix按钮，就能输出一个模型生成的猫。
 
 
-## Deep Computer Vision in DeepNude
+## DeepNude Technology Research
+
+This section describes DeepNude-related AI/Deep Learning theory (especially computer vision) research. If you like to read the paper and use the latest papers, enjoy it.
+
+这一部分阐述DeepNude相关的人工智能/深度学习理论（特别是计算机视觉）研究，如果你喜欢阅读论文使用最新论文成果，尽情享用吧。
 
 ### 1. Image Inpainting 图像修复
 
@@ -33,7 +39,7 @@ In the left side box, draw a cat as you imagine, and then click the pix 2 pix bu
 
 **效果**
 
-![](paper_images/2018_NVIDIA_Image_Inpainting.png)
+![](paper_images/2018_NVIDIA_Image_Inpainting_examples.png)
 
 In the image interface of [Image_Inpainting(NVIDIA_2018).mp4](https://github.com/yuanxiaosc/DeepNude-an-Image-to-Image-technology/raw/master/Image_Inpainting(NVIDIA_2018).mp4) video, you only need to use tools to simply smear the unwanted content in the image. Even if the shape is very irregular, NVIDIA's model can “restore” the image with very realistic The picture fills the smeared blank. It can be described as a one-click P picture, and "no ps traces."
 The study was based on a team from Nvidia's Guilin Liu et al. who published a deep learning method that could edit images or reconstruct corrupted images, even if the images were worn or lost pixels. This is the current 2018 state-of-the-art approach.
@@ -42,9 +48,9 @@ The study was based on a team from Nvidia's Guilin Liu et al. who published a de
 该研究来自Nvidia的Guilin Liu等人的团队，他们发布了一种可以编辑图像或重建已损坏图像的深度学习方法，即使图像穿了个洞或丢失了像素。这是目前2018 state-of-the-art的方法。
 
 
-### 2. Pix2Pix (need for paired train data)
+### 2. Image-to-Image or Pix2Pix (need for paired train data)
 
-> DeepNude mainly uses this Pix2Pix technology.
+> DeepNude mainly uses this Image-to-Image(Pix2Pix) technology.
 
 + 论文 Berkeley 2017 paper [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/abs/1611.07004).
 + 主页 homepage [Image-to-Image Translation with Conditional Adversarial Nets](https://phillipi.github.io/pix2pix/)
@@ -55,7 +61,7 @@ The study was based on a team from Nvidia's Guilin Liu et al. who published a de
 
 ![](paper_images/2017_Phillip_pix2pix_examples.jpg)
 
-[Image-to-Image Translation with Conditional Adversarial Networks] (https://arxiv.org/abs/1611.07004) is a general solution for the use of conditional confrontation networks as an image-to-image conversion problem proposed by the University of Berkeley.
+[Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/abs/1611.07004) is a general solution for the use of conditional confrontation networks as an image-to-image conversion problem proposed by the University of Berkeley.
 
 [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/abs/1611.07004) 是伯克利大学研究提出的使用条件对抗网络作为图像到图像转换问题的通用解决方案。
 
@@ -76,7 +82,12 @@ This opens up the possibility to do a lot of interesting tasks like photo-enhanc
 CycleGAN使用循环一致性损失函数来实现训练，而无需配对数据。 换句话说，它可以从一个域转换到另一个域，而无需在源域和目标域之间进行一对一映射。
 这开启了执行许多有趣任务的可能性，例如照片增强，图像着色，样式传输等。您只需要源和目标数据集。
 
+![](paper_images/2017_Zhu_CycleGAN_examples_horse2zebra.gif)
+horse2zebra 马变斑马
+
 ## DeepNude software itself
+
+**After researching DeepNude technology, I have removed data related to DeepNude. Please don't ask me to get DeepNude program.**
 
 ### DeepNude's technology stack
 
