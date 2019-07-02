@@ -1,9 +1,6 @@
 # DeepNude-an-Image-to-Image-technology
 > Reprinted to indicate the source 转载注明出处 https://github.com/yuanxiaosc/DeepNude-an-Image-to-Image-technology
 
-![](http://www.k4ai.com/content/images/2016/12/result-AB.gif)
-erasing image background 清除图像背景
-
 Next I will open up some image/text/random-to-image neural network models and utilities for learning and communication, and also welcome to share your technical solutions.
 
 接下来我会开源一些image/text/random-to-image的神经网络模型和实用工具，仅供学习交流之用，也欢迎分享你的技术解决方案。
