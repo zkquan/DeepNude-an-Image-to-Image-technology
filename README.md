@@ -6,7 +6,9 @@ Next I will open up some image/text/random-to-image neural network models and ut
 接下来我会开源一些image/text/random-to-image的神经网络模型和实用工具，仅供学习交流之用，也欢迎分享你的技术解决方案。
 
 ## [Image-to-Image Demo](https://affinelayer.com/pixsrv/) [图像到图像demo](https://affinelayer.com/pixsrv/)
-> Stick figure to colorful cats/shoes/handbags demo 简笔画到色彩丰富的猫、鞋、手袋 demo
+This section provides a demo of Image-to-Image Demo: Black and white stick figures to colorful cats, shoes, handbags.
+
+这一部分提供一个试玩的Image-to-Image Demo：黑白简笔画到色彩丰富的猫、鞋、手袋。
 
 DeepNude software mainly uses Image-to-Image technology, which theoretically converts the images you enter into any image you want. You can experience Image-to-Image technology in your browser by clicking Image-to-Image Demo below.
 
@@ -23,7 +25,7 @@ In the left side box, draw a cat as you imagine, and then click the pix 2 pix bu
 在左侧框中按照自己想象画一个简笔画的猫，再点击pix2pix按钮，就能输出一个模型生成的猫。
 
 
-## DeepNude Technology Research
+## DeepNude Theoretical Research
 
 This section describes DeepNude-related AI/Deep Learning theory (especially computer vision) research. If you like to read the paper and use the latest papers, enjoy it.
 
@@ -50,7 +52,7 @@ The study was based on a team from Nvidia's Guilin Liu et al. who published a de
 > DeepNude mainly uses this Image-to-Image(Pix2Pix) technology.
 
 + 论文 Berkeley 2017 paper [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/abs/1611.07004).
-+ 主页 homepage [Image-to-Image Translation with Conditional Adversarial Nets](https://phillipi.github.io/pix2pix/)
++ 主页 [Pix2Pix homepage](https://phillipi.github.io/pix2pix/)
 + 代码 code [pix2pix](https://github.com/phillipi/pix2pix)
 + Run in Google Colab [pix2pix.ipynb](https://github.com/tensorflow/docs/blob/master/site/en/r2/tutorials/generative/pix2pix.ipynb)
 
@@ -66,6 +68,7 @@ The study was based on a team from Nvidia's Guilin Liu et al. who published a de
 ### 3. CycleGAN (without the need for paired train data)
 
 + 论文 Berkeley 2017 paper [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/abs/1703.10593)
++ 主页 [CycleGAN homepage](https://junyanz.github.io/CycleGAN/) 
 + 代码 code [CycleGAN](https://github.com/junyanz/CycleGAN)
 + Run in Google Colab [cyclegan.ipynb](https://github.com/tensorflow/docs/blob/master/site/en/r2/tutorials/generative/cyclegan.ipynb)
 
@@ -81,6 +84,23 @@ CycleGAN使用循环一致性损失函数来实现训练，而无需配对数据
 
 ![](paper_images/2017_Zhu_CycleGAN_examples_horse2zebra.gif)
 horse2zebra 马变斑马
+
+
+## DeepNude Practice Research
+
+This section explains DeepNude-related AI/Deep Learning (especially computer vision) code practices, and if you like to experiment, enjoy them.
+
+这一部分阐述DeepNude相关的人工智能/深度学习（特别是计算机视觉）代码实践，如果你喜欢动手做实验，尽情享用它们。
+
+**More models and functions will be added in the future*
+
+### [CycleGAN for Image-to-Image](CycleGAN)
+
+The CycleGAN neural network model is used to realize the four functions of photo style conversion, photo effect enhancement, landscape season change, and object conversion.
+
+使用CycleGAN神经网络模型实现照片风格转换、照片效果增强、照片中风景季节变换、物体转换四大功能。
+
+[Click Start Experience](CycleGAN)
 
 ## DeepNude software itself
 
