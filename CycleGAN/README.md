@@ -1,24 +1,18 @@
 # CycleGAN
-CycleGAN uses a cycle consistency loss to enable training without the need for paired data. In other words, it can translate from one domain to another without a one-to-one mapping between the source and target domain.
-This opens up the possibility to do a lot of interesting tasks like photo-enhancement, image colorization, style transfer, etc. All you need is the source and the target dataset.
 
-CycleGAN使用循环一致性损失函数来实现训练，而无需配对数据。换句话说，它可以从一个域转换到另一个域，而无需在源域和目标域之间进行一对一映射。
-这开启了执行许多有趣任务的可能性，例如照片增强，图像着色，样式传输等。您只需要源和目标数据集。
+CycleGAN uses a cyclic consistency loss function to implement training without pairing data. In other words, it can be converted from one domain to another without a one-to-one mapping between the source and target domains. You only need to collect the source data set A and the target data set B, and then learn the direct relationship between A and B through CycleGAN, and then input A to CycleGAN to generate B, and vice versa.
+
+CycleGAN使用循环一致性损失函数来实现训练，而无需配对数据。换句话说，它可以从一个域转换到另一个域，而无需在源域和目标域之间进行一对一映射。你只需要收集源数据集A和目标数据集B，然后通过CycleGAN学习A和B直接的关系，进而给CycleGAN输入A就可以生成B，反之亦然。
 
 Here, the CycleGAN neural network model is used to realize the four functions of photo style conversion, photo effect enhancement, landscape season change, and object conversion.
 
 这儿，使用CycleGAN神经网络模型实现照片风格转换、照片效果增强、照片中风景季节变换、物体转换四大功能。
 
-## 摘要 Abstract
-> paper [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/abs/1703.10593)
-Image-to-image translation is a class of vision and graphics problems where the goal is to learn the mapping between an input image and an output image using a training set of aligned image pairs. However, for many tasks, paired training data will not be available. We present an approach for learning to translate an image from a source domain X to a target domain Y in the absence of paired examples. Our goal is to learn a mapping G: X → Y such that the distribution of images from G(X) is indistinguishable from the distribution Y using an adversarial loss. Because this mapping is highly under-constrained, we couple it with an inverse mapping F: Y → X and introduce a cycle consistency loss to push F(G(X)) ≈ X (and vice versa). Qualitative results are presented on several tasks where paired training data does not exist, including collection style transfer, object transfiguration, season transfer, photo enhancement, etc. Quantitative comparisons against several prior methods demonstrate the superiority of our approach.
-
+> If you have interesting ideas or data, please contact me quickly at wangzichaochaochao@gmail.com .
 
 ## 代码用法 Code usage
 
-The tasks that have already processed the data are as follows. For specific data content and experimental results, see the Task Name chapter.
-
-已经处理好数据的任务如下，具体数据内容和实验效果见Task Name章节。
+The tasks that have already processed the data are as follows. For specific data content and experimental results, see the Task Name chapter. 已经处理好数据的任务如下，具体数据内容和实验效果见Task Name章节。
 
 ```
 cycle_gan_dataset_name_list = ["apple2orange", "summer2winter_yosemite", "horse2zebra", "monet2photo",
@@ -103,5 +97,5 @@ You can use the ```python cyclegan_model.py``` command to view the data requirem
 |地图2航拍图| maps|
 
 
-
+Learn more, paper [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/abs/1703.10593)
 

@@ -5,6 +5,8 @@ Next I will open up some image/text/random-to-image neural network models and ut
 
 接下来我会开源一些image/text/random-to-image的神经网络模型和实用工具，仅供学习交流之用，也欢迎分享你的技术解决方案。
 
+---
+
 ## [Image-to-Image Demo](https://affinelayer.com/pixsrv/) [图像到图像demo](https://affinelayer.com/pixsrv/)
 This section provides a demo of Image-to-Image Demo: Black and white stick figures to colorful cats, shoes, handbags.
 
@@ -24,6 +26,7 @@ In the left side box, draw a cat as you imagine, and then click the pix 2 pix bu
 
 在左侧框中按照自己想象画一个简笔画的猫，再点击pix2pix按钮，就能输出一个模型生成的猫。
 
+---
 
 ## DeepNude Theoretical Research
 
@@ -79,12 +82,13 @@ The study was based on a team from Nvidia's Guilin Liu et al. who published a de
 CycleGAN uses a cycle consistency loss to enable training without the need for paired data. In other words, it can translate from one domain to another without a one-to-one mapping between the source and target domain.
 This opens up the possibility to do a lot of interesting tasks like photo-enhancement, image colorization, style transfer, etc. All you need is the source and the target dataset.
 
-CycleGAN使用循环一致性损失函数来实现训练，而无需配对数据。 换句话说，它可以从一个域转换到另一个域，而无需在源域和目标域之间进行一对一映射。
+CycleGAN使用循环一致性损失函数来实现训练，而无需配对数据。换句话说，它可以从一个域转换到另一个域，而无需在源域和目标域之间进行一对一映射。
 这开启了执行许多有趣任务的可能性，例如照片增强，图像着色，样式传输等。您只需要源和目标数据集。
 
 ![](paper_images/2017_Zhu_CycleGAN_examples_horse2zebra.gif)
 horse2zebra 马变斑马
 
+---
 
 ## DeepNude Practice Research
 
@@ -92,7 +96,7 @@ This section explains DeepNude-related AI/Deep Learning (especially computer vis
 
 这一部分阐述DeepNude相关的人工智能/深度学习（特别是计算机视觉）代码实践，如果你喜欢动手做实验，尽情享用它们。
 
-**More models and functions will be added in the future*
+**More models and functions will be added in the future**
 
 ### [CycleGAN for Image-to-Image](CycleGAN)
 
@@ -101,6 +105,8 @@ The CycleGAN neural network model is used to realize the four functions of photo
 使用CycleGAN神经网络模型实现照片风格转换、照片效果增强、照片中风景季节变换、物体转换四大功能。
 
 [Click Start Experience](CycleGAN)
+
+---
 
 ## DeepNude software itself
 
@@ -140,6 +146,7 @@ Delete the color.cp36-win_amd64.pyd file in the deepnude root directory, and the
 + DeepNude can be implemented using [Tensorflow](https://www.tensorflow.org/) and uses model compression techniques. 
 + DeepNude should change the current practice of not respecting women.
 
+---
 
 ## Future
 
@@ -175,7 +182,7 @@ The new AI technology Obj-GAN developed by Microsoft Research AI understands nat
 ![](https://www.microsoft.com/en-us/research/uploads/prod/2019/06/drawing-bot-figure-3.png)
 
 
------
+---
 
 **Researchers should work to improve human well-being, not to gain income through breaking the law.**.
 
