@@ -7,10 +7,10 @@ Next I will open up some image/text/random-to-image neural network models and ut
 
 ---
 
-## [Image-to-Image Demo](https://affinelayer.com/pixsrv/) [图像到图像demo](https://affinelayer.com/pixsrv/)
+## [Image-to-Image Demo](https://affinelayer.com/pixsrv/) [图像到图像 demo](https://affinelayer.com/pixsrv/)
 This section provides a demo of Image-to-Image Demo: Black and white stick figures to colorful cats, shoes, handbags.
 
-这一部分提供一个试玩的Image-to-Image Demo：黑白简笔画到色彩丰富的猫、鞋、手袋。
+这一部分提供一个试玩的 Image-to-Image Demo：黑白简笔画到色彩丰富的猫、鞋、手袋。
 
 DeepNude software mainly uses Image-to-Image technology, which theoretically converts the images you enter into any image you want. You can experience Image-to-Image technology in your browser by clicking Image-to-Image Demo below.
 
@@ -22,9 +22,9 @@ An example of using this demo is as follows：
 
 ![](paper_images/2017_Phillip_pix2pix_examples_edges2cats.png)
 
-In the left side box, draw a cat as you imagine, and then click the pix 2 pix button, you can output a model generated cat.
+In the left side box, draw a cat as you imagine, and then click the process button, you can output a model generated cat.
 
-在左侧框中按照自己想象画一个简笔画的猫，再点击pix2pix按钮，就能输出一个模型生成的猫。
+在左侧框中按照自己想象画一个简笔画的猫，再点击process按钮，就能输出一个模型生成的猫。
 
 ---
 
@@ -91,20 +91,20 @@ horse2zebra 马变斑马
 ---
 
 ## DeepNude Practice Research
+> More models and functions will be added in the future
 
 This section explains DeepNude-related AI/Deep Learning (especially computer vision) code practices, and if you like to experiment, enjoy them.
 
 这一部分阐述DeepNude相关的人工智能/深度学习（特别是计算机视觉）代码实践，如果你喜欢动手做实验，尽情享用它们。
 
-**More models and functions will be added in the future**
 
-### [CycleGAN for Image-to-Image](CycleGAN)
+### A. [CycleGAN for Image-to-Image](CycleGAN)
 
 The CycleGAN neural network model is used to realize the four functions of photo style conversion, photo effect enhancement, landscape season change, and object conversion.
 
 使用CycleGAN神经网络模型实现照片风格转换、照片效果增强、照片中风景季节变换、物体转换四大功能。
 
-[Click Start Experience](CycleGAN)
+[Click Start Experience A](CycleGAN)
 
 ---
 
@@ -184,8 +184,9 @@ The new AI technology Obj-GAN developed by Microsoft Research AI understands nat
 
 ---
 
-**Researchers should work to improve human well-being, not to gain income through breaking the law.**.
-
 The most commonly used image-to-image technology should be Beauty App, so why don't we develop a smarter Beauty Camera?
 
 现在用得最多的Image-to-Image技术应该就是美颜APP了，所以我们为什么不开发一个更加智能的美颜相机呢？
+
+
+**Researchers should work to improve human well-being, not to gain income through breaking the law.**.

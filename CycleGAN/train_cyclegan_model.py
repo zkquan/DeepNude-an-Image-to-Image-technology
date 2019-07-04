@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import sys
 import os
 import time
-from dataset_utils import download_and_processing_cyclegan_dataset, cycle_gan_dataset_name_list
+from dataset_utils import download_and_processing_cyclegan_dataset, predefined_cyclegan_task_name_list
 from cyclegan_model import unet_generator, discriminator, \
     generator_loss, discriminator_loss, calc_cycle_loss, identity_loss
 
@@ -31,7 +31,7 @@ def generate_images(epoch, model, test_input, store_produce_image_dir):
     plt.close(fig)
 
 
-def main(task_name="apple2orange", EPOCHS=200, BATCH_SIZE=1, OUTPUT_CHANNELS=3,
+def main(data_dir_or_predefined_task_name="apple2orange", EPOCHS=200, BATCH_SIZE=1, OUTPUT_CHANNELS=3,
          store_produce_image_dir="train_produce_images", checkpoint_path = "./checkpoints/train"):
 
     @tf.function
@@ -97,7 +97,7 @@ def main(task_name="apple2orange", EPOCHS=200, BATCH_SIZE=1, OUTPUT_CHANNELS=3,
                 discriminator_y.trainable_variables))
 
     # prepare data
-    trainA_dataset, trainB_dataset, _, _ = download_and_processing_cyclegan_dataset(task_name, BATCH_SIZE)
+    trainA_dataset, trainB_dataset, _, _ = download_and_processing_cyclegan_dataset(data_dir_or_predefined_task_name, BATCH_SIZE)
 
     # create model
     # B = generator_g(A), A = generator_f(B)
@@ -152,15 +152,20 @@ def main(task_name="apple2orange", EPOCHS=200, BATCH_SIZE=1, OUTPUT_CHANNELS=3,
 
 
 if __name__=="__main__":
-    task_name = "apple2orange"
+    print("You can choose a task_name from predefined_cyclegan_task_name_list!")
+    print(predefined_cyclegan_task_name_list)
+    # task_name and data_dir only need to provide one of them
+    #data_dir_or_predefined_task_name = "/home/b418a/.keras/datasets/apple2orange"
+    data_dir_or_predefined_task_name = "apple2orange"
+
     EPOCHS = 200
     BATCH_SIZE = 10
     OUTPUT_CHANNELS = 3
     store_produce_image_dir = "train_produce_images"
     checkpoint_path = "./checkpoints/train"
-    print("You can choose a task from cycle_gan_dataset_name_list!")
-    print(cycle_gan_dataset_name_list)
+
     if len(sys.argv) == 2:
-        task_name = sys.argv[1]
-    print(f"You choose task_name is {task_name}")
-    main(task_name, EPOCHS, BATCH_SIZE, OUTPUT_CHANNELS, store_produce_image_dir, checkpoint_path)
+        data_dir_or_predefined_task_name = sys.argv[1]
+    print(f"You choose data_dir_or_predefined_task_name is {data_dir_or_predefined_task_name}")
+
+    main(data_dir_or_predefined_task_name, EPOCHS, BATCH_SIZE, OUTPUT_CHANNELS, store_produce_image_dir, checkpoint_path)

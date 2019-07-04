@@ -2,7 +2,7 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 import os
 import sys
-from dataset_utils import download_and_processing_cyclegan_dataset, cycle_gan_dataset_name_list
+from dataset_utils import download_and_processing_cyclegan_dataset, predefined_cyclegan_task_name_list
 from cyclegan_model import unet_generator, discriminator
 
 
@@ -22,7 +22,8 @@ def generate_images(idx, model, test_input, store_produce_image_dir):
         plt.subplot(1, 2, i + 1)
         plt.title(title[i])
         # getting the pixel values between [0, 1] to plot it.
-        plt.imshow(display_list[i] * 0.5 + 0.5)
+        show_matrix = display_list[i] * 0.5 + 0.5
+        plt.imshow(show_matrix)
         plt.axis('off')
     save_image_path = os.path.join(store_produce_image_dir, f'{str(idx)}_{title[i]}.png')
     plt.savefig(save_image_path)
@@ -67,21 +68,25 @@ class CycleGAN_Inference_Manager(object):
         else:
             print("Not found checkpoint!")
 
-    def get_test_dataset(self, task_name="apple2orange", BATCH_SIZE=1):
+    def get_test_dataset(self, data_dir_or_predefined_task_name="apple2orange", BATCH_SIZE=1):
         # prepare data
-        _, _, testA_dataset, testB_dataset = download_and_processing_cyclegan_dataset(task_name, BATCH_SIZE)
+        _, _, testA_dataset, testB_dataset = download_and_processing_cyclegan_dataset(data_dir_or_predefined_task_name, BATCH_SIZE)
         return testA_dataset, testB_dataset
 
 
 if __name__ == "__main__":
-    task_name = "apple2orange"
-    print("You can choose a task from cycle_gan_dataset_name_list!")
-    print(cycle_gan_dataset_name_list)
-    if len(sys.argv) == 2:
-        task_name = sys.argv[1]
-    print(f"You choose task_name is {task_name}")
+    # task_name and data_dir only need to provide one of them
+    #data_dir_or_predefined_task_name = "/home/b418a/.keras/datasets/apple2orange"
+    data_dir_or_predefined_task_name = "apple2orange"
 
-    inference_data_number = 5
+    print("You can choose a task_name from predefined_cyclegan_task_name_list!")
+    print(predefined_cyclegan_task_name_list)
+
+    if len(sys.argv) == 2:
+        data_dir_or_predefined_task_name = sys.argv[1]
+    print(f"You choose data_dir_or_predefined_task_name is {data_dir_or_predefined_task_name}")
+
+    inference_data_number = 6
     BATCH_SIZE = 1
     checkpoint_path = "./checkpoints/train"
     store_produce_image_dir_A2B = 'inference_images_A2B'
@@ -91,7 +96,7 @@ if __name__ == "__main__":
     cyclegan_infer = CycleGAN_Inference_Manager(checkpoint_path)
 
     # prepare data
-    testA_dataset, testB_dataset = cyclegan_infer.get_test_dataset(task_name, BATCH_SIZE)
+    testA_dataset, testB_dataset = cyclegan_infer.get_test_dataset(data_dir_or_predefined_task_name, BATCH_SIZE)
 
     # Run the trained model on the test dataset
     # B = generator_g(A), A = generator_f(B)
