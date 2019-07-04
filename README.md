@@ -1,13 +1,17 @@
 # DeepNude-an-Image-to-Image-technology
 > Reprinted to indicate the source 转载注明出处 https://github.com/yuanxiaosc/DeepNude-an-Image-to-Image-technology
 
-Next I will open up some image/text/random-to-image neural network models and utilities for learning and communication, and also welcome to share your technical solutions.
+### Content
 
-接下来我会开源一些image/text/random-to-image的神经网络模型和实用工具，仅供学习交流之用，也欢迎分享你的技术解决方案。
+1. Image-to-Image Demo 		            试玩Demo
+2. Image-to-Image Theoretical Research  理论研究
+3. Image-to-Image Practice Research     实践研究
+4. DeepNude software itself             软件自身
+5. Future						        展望未来
 
 ---
 
-## [Image-to-Image Demo](https://affinelayer.com/pixsrv/) [图像到图像 demo](https://affinelayer.com/pixsrv/)
+## Image-to-Image Demo
 This section provides a demo of Image-to-Image Demo: Black and white stick figures to colorful cats, shoes, handbags.
 
 这一部分提供一个试玩的 Image-to-Image Demo：黑白简笔画到色彩丰富的猫、鞋、手袋。
@@ -28,7 +32,7 @@ In the left side box, draw a cat as you imagine, and then click the process butt
 
 ---
 
-## DeepNude Theoretical Research
+## Image-to-Image Theoretical Research
 
 This section describes DeepNude-related AI/Deep Learning theory (especially computer vision) research. If you like to read the paper and use the latest papers, enjoy it.
 
@@ -90,7 +94,7 @@ horse2zebra 马变斑马
 
 ---
 
-## DeepNude Practice Research
+## Image-to-Image Practice Research
 > More models and functions will be added in the future
 
 This section explains DeepNude-related AI/Deep Learning (especially computer vision) code practices, and if you like to experiment, enjoy them.
@@ -189,4 +193,4 @@ The most commonly used image-to-image technology should be Beauty App, so why do
 现在用得最多的Image-to-Image技术应该就是美颜APP了，所以我们为什么不开发一个更加智能的美颜相机呢？
 
 
-**Researchers should work to improve human well-being, not to gain income through breaking the law.**.
+**If you have interesting ideas or data, please contact me quickly at wangzichaochaochao@gmail.com**.

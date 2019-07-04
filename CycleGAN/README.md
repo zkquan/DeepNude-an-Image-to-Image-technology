@@ -9,10 +9,11 @@ Here, the CycleGAN neural network model is used to realize the four functions of
 
 这儿，使用CycleGAN神经网络模型实现照片风格转换、照片效果增强、照片中风景季节变换、物体转换四大功能。
 
+---
 
 ## 代码用法 Code usage
 
-You can use your own data or directly use the data of a predefined task, pre-defined task(data_dir_or_predefined_task_name) descriptions to view the next chapter Task_Name.
+You can use your own data or directly use the data of a predefined task, pre-defined task(data_dir_or_predefined_task_name) descriptions to view the next chapter Task Name.
 
 你可以使用自己的数据或者直接使用预定义任务的数据，预定义任务（data_dir_or_predefined_task_name）说明查看下一章 预定义任务名称。
 
@@ -20,6 +21,7 @@ You can use your own data or directly use the data of a predefined task, pre-def
 
 + python 3+, e.g. python==3.6 
 + tensorflow version 2, e.g. tensorflow==2.0.0-beta1 
++ tensorflow-datasets
 
 ### Train Model
 
@@ -33,14 +35,16 @@ python train_image2text_model.py data_dir_or_predefined_task_name
 python inference_by_image2text_model.py data_dir_or_predefined_task_name
 ```
 
+---
 
 ## 预定义任务名称 Task Name
+
 The tasks that have already processed the data are as follows. For specific data content and experimental results, see the Task Name chapter. 已经处理好数据的任务如下，具体数据内容和实验效果见Task Name章节。
 
 ```
-cycle_gan_dataset_name_list = ["apple2orange", "summer2winter_yosemite", "horse2zebra", "monet2photo",
-                               "cezanne2photo", "ukiyoe2photo", "vangogh2photo", "maps",
-                               "cityscapes", "facades", "iphone2dslr_flower", ]
+predefined_cyclegan_task_name_list = ["apple2orange", "summer2winter_yosemite", "horse2zebra", "monet2photo",
+									  "cezanne2photo", "ukiyoe2photo", "vangogh2photo", "maps",
+                                      "cityscapes", "facades", "iphone2dslr_flower", ]
 ```
 
 You can use the following data_dir_or_predefined_task_name parameters directly, or you can define new tasks yourself.
@@ -52,7 +56,7 @@ python train_image2text_model.py apple2orange
 ```
 
 
-### 照片风格转换   Style Transfer
+### 1. 照片风格转换   Style Transfer
 
 |任务名称|task_name|
 |-|-|
@@ -64,7 +68,7 @@ python train_image2text_model.py apple2orange
 ![](https://junyanz.github.io/CycleGAN/images/photo2painting.jpg)
 
 
-### 照片效果增强：虚化背景  Photo Enhancement: Narrow depth of field
+### 2. 照片效果增强：虚化背景  Photo Enhancement: Narrow depth of field
 
 |任务名称|task_name|
 |-|-|
@@ -73,7 +77,7 @@ python train_image2text_model.py apple2orange
 ![](https://junyanz.github.io/CycleGAN/images/photo_enhancement.jpg)
 
 
-### 照片风景季节变换 Season Transfer
+### 3. 照片风景季节变换 Season Transfer
 
 |任务名称|task_name|
 |-|-|
@@ -82,7 +86,7 @@ python train_image2text_model.py apple2orange
 ![](https://junyanz.github.io/CycleGAN/images/season.jpg)
 
 
-### 物体转换 Object Transfiguration
+### 4. 物体转换 Object Transfiguration
 
 |任务名称|task_name|
 |-|-|
@@ -91,7 +95,7 @@ python train_image2text_model.py apple2orange
 
 ![](https://junyanz.github.io/CycleGAN/images/objects.jpg)
 
-### 其它 other
+### 5. 其它 other
 
 |任务名称|task_name|
 |-|-|
@@ -113,6 +117,33 @@ def load_cyclegan_image_dataset_from_data_folder(data_dir):
      the source image set used for the test, and the target image set used for the test."""
 ```
 
+Give an example 举例：
+
+```
+apple2orange-|_trainA-|_fesf233.jpg
+			 |		  |_ju43uuu.jpg
+			 |		  |_...
+			 |        |_8989jkj.jpg
+			 |
+			 |_trainB-|_333f233.jpg
+			 |		  |_675gfgd.jpg
+			 |		  |_...
+			 |        |_jjjjjkj.jpg
+			 |
+			 |_testA--|_23sf233.jpg
+			 |		  |_ttt3uuu.jpg
+			 |		  |_...
+			 |        |_yyy9jkj.jpg
+			 |
+			 |_testB--|_hhhf233.jpg
+			 		  |_67ugfgd.jpg
+			 		  |_...
+			          |_ilkhtkj.jpg		
+				   
+```
+
+
+
 If the data folder path is /home/b418a/.keras/datasets/apple2orange
 
 
@@ -121,4 +152,3 @@ python train_image2text_model.py /home/b418a/.keras/datasets/apple2orange
 ```
 
 
-Learn more, paper [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/abs/1703.10593)
