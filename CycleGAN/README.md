@@ -3,9 +3,9 @@
 
 CycleGAN uses a cyclic consistency loss function to facilitate model training without pairing data. For example, you only need to prepare thousands of photos of the source dataset and thousands of photos of the target dataset, and then CycleGAN (through the training model) can learn the relationship between the source image set apple and the target image set orange. Entering the apple after the training CycleGAN can generate oranges, and vice versa. The main advantage of CycleGAN is that it can learn the relationship between the source image set and the target image set without one-to-one mapping between the source image set apple and the target image set orange.
 
-CycleGAN使用循环一致性损失函数来促使模型训练，而无需配对数据。比如，只需要准备源数据集几千张苹果的照片和目标数据集几千张橘子的照片，然后CycleGAN（通过训练模型）就可以学习源图片集苹果和目标图片集橘子的之间的关系。给训练后的CycleGAN输入苹果就可以生成橘子，反之亦然。CycleGAN的主要优点是可以不需要在源图片集苹果和目标图片集橘子之间进行一对一对应，就能学习源图片集和目标图片集的关系。
-
 Here, the CycleGAN neural network model is used to realize the four functions of photo style conversion, photo effect enhancement, landscape season change, and object conversion.
+
+CycleGAN使用循环一致性损失函数来促使模型训练，而无需配对数据。比如，只需要准备源数据集几千张苹果的照片和目标数据集几千张橘子的照片，然后CycleGAN（通过训练模型）就可以学习源图片集苹果和目标图片集橘子的之间的关系。给训练后的CycleGAN输入苹果就可以生成橘子，反之亦然。CycleGAN的主要优点是可以不需要在源图片集苹果和目标图片集橘子之间进行一对一对应，就能学习源图片集和目标图片集的关系。
 
 这儿，使用CycleGAN神经网络模型实现照片风格转换、照片效果增强、照片中风景季节变换、物体转换四大功能。
 

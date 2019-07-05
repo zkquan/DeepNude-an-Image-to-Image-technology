@@ -26,9 +26,10 @@ def generate_images(epoch, model, test_input, tar, store_produce_image_dir):
         plt.subplot(1, 3, i + 1)
         plt.title(title[i])
         # getting the pixel values between [0, 1] to plot it.
-        save_image_path = os.path.join(store_produce_image_dir, 'image_at_epoch_{:04d}.png'.format(epoch))
-        plt.savefig(save_image_path)
+        plt.imshow(display_list[i] * 0.5 + 0.5)
         plt.axis('off')
+    save_image_path = os.path.join(store_produce_image_dir, 'image_at_epoch_{:04d}.png'.format(epoch))
+    plt.savefig(save_image_path)
     #plt.show()
     plt.close(fig)
 
@@ -62,8 +63,8 @@ def main(data_dir_or_predefined_task_name="apple2orange", EPOCHS=200, BATCH_SIZE
             for inp, tar in test_dataset.take(1):
                 generate_images(epoch, generator, inp, tar, store_produce_image_dir)
 
-            # saving (checkpoint) the model every 20 epochs
-            if (epoch + 1) % 20 == 0:
+            # saving (checkpoint) the model every 5 epochs
+            if (epoch + 1) % 5 == 0:
                 checkpoint.save(file_prefix=checkpoint_prefix)
 
             print('Time taken for epoch {} is {} sec\n'.format(epoch + 1, time.time() - start))
@@ -84,7 +85,7 @@ def main(data_dir_or_predefined_task_name="apple2orange", EPOCHS=200, BATCH_SIZE
                                      generator=generator,
                                      discriminator=discriminator)
 
-    ckpt_manager = tf.train.CheckpointManager(checkpoint, checkpoint_dir, max_to_keep=5)
+    ckpt_manager = tf.train.CheckpointManager(checkpoint, checkpoint_dir, max_to_keep=10)
 
     # if a checkpoint exists, restore the latest checkpoint.
     if ckpt_manager.latest_checkpoint:
