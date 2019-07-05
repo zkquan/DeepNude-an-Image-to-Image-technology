@@ -13,14 +13,21 @@ Here, the CycleGAN neural network model is used to realize the four functions of
 
 ## 代码用法 Code usage
 
-You can use your own data or directly use the data of a predefined task, pre-defined task(data_dir_or_predefined_task_name) descriptions to view the next chapter Task Name.
+You can use your own data or directly use the data of a predefined task.
 
-你可以使用自己的数据或者直接使用预定义任务的数据，预定义任务（data_dir_or_predefined_task_name）说明查看下一章 预定义任务名称。
+你可以使用自己的数据或者直接使用预定义任务的数据。
+
+```
+predefined_cyclegan_task_name_list = [
+"apple2orange", "summer2winter_yosemite", "horse2zebra", "monet2photo",
+"cezanne2photo", "ukiyoe2photo", "vangogh2photo", "maps", "cityscapes",
+"facades", "iphone2dslr_flower"]
+```
 
 ### Require
 
-+ python 3+, e.g. python==3.6 
-+ tensorflow version 2, e.g. tensorflow==2.0.0-beta1 
++ python 3+, e.g. python==3.6
++ tensorflow version 2, e.g. tensorflow==2.0.0-beta1
 + tensorflow-datasets
 
 ### Train Model
@@ -38,14 +45,6 @@ python inference_by_image2text_model.py data_dir_or_predefined_task_name
 ---
 
 ## 预定义任务名称 Task Name
-
-The tasks that have already processed the data are as follows. For specific data content and experimental results, see the Task Name chapter. 已经处理好数据的任务如下，具体数据内容和实验效果见Task Name章节。
-
-```
-predefined_cyclegan_task_name_list = ["apple2orange", "summer2winter_yosemite", "horse2zebra", "monet2photo",
-									  "cezanne2photo", "ukiyoe2photo", "vangogh2photo", "maps",
-                                      "cityscapes", "facades", "iphone2dslr_flower", ]
-```
 
 You can use the following data_dir_or_predefined_task_name parameters directly, or you can define new tasks yourself.
 
@@ -107,6 +106,44 @@ python train_image2text_model.py apple2orange
 
 ## 使用自己的数据 Use your own data
 
+Give an example 举例：
+
+[apple2orange_example](apple2orange_example)
+
+```
+apple2orange
+│
+│  
+├─testA
+│      nfew3261_apple.jpg
+│      n073f461_apple.jpg
+│      rrrrg461_apple.jpg
+│      
+├─testB
+│      rtrt912_orange.jpg
+│      n0gferf_orange.jpg
+│      trgerw3_orange.jpg
+│      
+├─trainA
+│      5gr40461_apple.jpg
+│      tfdvd441_apple.jpg
+│      nfew4046_apple.jpg
+│      
+└─trainB
+       yy49192_orange.jpg
+       hgfhfp7_orange.jpg
+       osfs323_orange.jpg
+```
+
+
+
+If the data folder path(apple2orange_example) is /home/b418a/.keras/datasets/apple2orange
+
+
+```
+python train_image2text_model.py /home/b418a/.keras/datasets/apple2orange
+```
+
 > See the load_cyclegan_image_dataset_from_data_folder function in dataset_utils.py for details.
 
 ```
@@ -116,39 +153,3 @@ def load_cyclegan_image_dataset_from_data_folder(data_dir):
      source image set used for training, the target image set used for training,
      the source image set used for the test, and the target image set used for the test."""
 ```
-
-Give an example 举例：
-
-```
-apple2orange-|_trainA-|_fesf233.jpg
-			 |		  |_ju43uuu.jpg
-			 |		  |_...
-			 |        |_8989jkj.jpg
-			 |
-			 |_trainB-|_333f233.jpg
-			 |		  |_675gfgd.jpg
-			 |		  |_...
-			 |        |_jjjjjkj.jpg
-			 |
-			 |_testA--|_23sf233.jpg
-			 |		  |_ttt3uuu.jpg
-			 |		  |_...
-			 |        |_yyy9jkj.jpg
-			 |
-			 |_testB--|_hhhf233.jpg
-			 		  |_67ugfgd.jpg
-			 		  |_...
-			          |_ilkhtkj.jpg		
-				   
-```
-
-
-
-If the data folder path is /home/b418a/.keras/datasets/apple2orange
-
-
-```
-python train_image2text_model.py /home/b418a/.keras/datasets/apple2orange
-```
-
-

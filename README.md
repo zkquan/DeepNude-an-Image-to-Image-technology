@@ -1,13 +1,21 @@
 # DeepNude-an-Image-to-Image-technology
-> Reprinted to indicate the source 转载注明出处 https://github.com/yuanxiaosc/DeepNude-an-Image-to-Image-technology
 
-### Content
+## What is DeepNude? 什么是 DeepNude?
+[Conditional Adversarial Networks](Pix2Pix) learns the mapping of pixel levels at the corresponding image by training on the original collection and the target collection. For example, the neural network model in DeepNude trains on 10,000 ordinary female photos (source collections) and their corresponding nude photos (target collections). Entering a normal female photo into a trained model produces a corresponding nude photo.
 
-1. Image-to-Image Demo 		            试玩Demo
-2. Image-to-Image Theoretical Research  理论研究
-3. Image-to-Image Practice Research     实践研究
-4. DeepNude software itself             软件自身
-5. Future						        展望未来
+[Conditional Adversarial Networks](Pix2Pix) 通过在原图片集和目标图片集上训练，学习对应图片像素级别的映射关系。例如，DeepNude中的神经网络模型就是在10000张普通女性照片（源图片集）和其对应的裸体照片上（目标图片集）进行训练。把普通女性照片输入训练好的模型就能生成其对应的裸体照片。
+
+> If you are not interested in theory and want to build your own application directly, click [here](Pix2Pix). 如果你对理论不感兴趣，想直接打造自己的应用，点击[这儿](Pix2Pix)。
+
+## Content of this resource 本资源内容
+
+|English|中文|
+|-|-|
+|Image-to-Image Demo |		             试玩Demo|
+|Image-to-Image Theoretical Research|  理论研究|
+|Image-to-Image Practice Research|     实践研究|
+|DeepNude software itself|             软件自身|
+|Future|					                     展望未来|
 
 ---
 
@@ -75,7 +83,7 @@ The study was based on a team from Nvidia's Guilin Liu et al. who published a de
 ### 3. CycleGAN (without the need for paired train data)
 
 + 论文 Berkeley 2017 paper [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/abs/1703.10593)
-+ 主页 [CycleGAN homepage](https://junyanz.github.io/CycleGAN/) 
++ 主页 [CycleGAN homepage](https://junyanz.github.io/CycleGAN/)
 + 代码 code [CycleGAN](https://github.com/junyanz/CycleGAN)
 + Run in Google Colab [cyclegan.ipynb](https://github.com/tensorflow/docs/blob/master/site/en/r2/tutorials/generative/cyclegan.ipynb)
 
@@ -120,7 +128,7 @@ The CycleGAN neural network model is used to realize the four functions of photo
 
 ![](DeepNude_images/DeepNode_0.png)
 
-+ [Python](https://www.python.org/) + PyQt 
++ [Python](https://www.python.org/) + PyQt
 + [pytorch](https://pytorch.org/)
 + Deep Computer Vision
 
@@ -147,7 +155,7 @@ Delete the color.cp36-win_amd64.pyd file in the deepnude root directory, and the
 
 **Where DeepNude can be improved**
 
-+ DeepNude can be implemented using [Tensorflow](https://www.tensorflow.org/) and uses model compression techniques. 
++ DeepNude can be implemented using [Tensorflow](https://www.tensorflow.org/) and uses model compression techniques.
 + DeepNude should change the current practice of not respecting women.
 
 ---
@@ -156,7 +164,7 @@ Delete the color.cp36-win_amd64.pyd file in the deepnude root directory, and the
 
 In fact, we don't need Image-to-Image. We can use [GANs](https://arxiv.org/abs/1406.2661) to generate images directly from random values or generate images from text.
 
-### 1. [Obj-GAN](https://github.com/jamesli1618/Obj-GAN) 
+### 1. [Obj-GAN](https://github.com/jamesli1618/Obj-GAN)
 
 The new AI technology Obj-GAN developed by Microsoft Research AI understands natural language descriptions, sketches, composite images, and then refines the details based on individual words provided by sketch frames and text. In other words, the network can generate images of the same scene based on textual descriptions that describe everyday scenes.
 
