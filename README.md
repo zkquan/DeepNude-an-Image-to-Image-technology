@@ -1,11 +1,14 @@
 # DeepNude-an-Image-to-Image-technology
+> If you are not interested in theory and want to build your own Image-to-Image application directly, click [here](Pix2Pix). 如果你对理论不感兴趣，想直接打造自己的Image-to-Image应用，点击[这儿](Pix2Pix)。
 
 ## What is DeepNude? 什么是 DeepNude?
 [Conditional Adversarial Networks](Pix2Pix) learns the mapping of pixel levels at the corresponding image by training on the original collection and the target collection. For example, the neural network model in DeepNude trains on 10,000 ordinary female photos (source collections) and their corresponding nude photos (target collections). Entering a normal female photo into a trained model produces a corresponding nude photo.
 
 [Conditional Adversarial Networks](Pix2Pix) 通过在原图片集和目标图片集上训练，学习对应图片像素级别的映射关系。例如，DeepNude中的神经网络模型就是在10000张普通女性照片（源图片集）和其对应的裸体照片上（目标图片集）进行训练。把普通女性照片输入训练好的模型就能生成其对应的裸体照片。
 
-> If you are not interested in theory and want to build your own application directly, click [here](Pix2Pix). 如果你对理论不感兴趣，想直接打造自己的应用，点击[这儿](Pix2Pix)。
+Obviously, DeepNude is an inappropriate application of artificial intelligence technology, which makes some people have aversion to artificial intelligence technology. It is necessary to clarify the use of the technology itself and the technology. History has long proven that the benefits of using technology are far greater than its drawbacks. We can't lose confidence in artificial intelligence because of squandering food. Here is the place to see the essence of the problem!
+
+显然 DeepNude 是一种人工智能技术不恰当的应用，这让一部分人对人工智能技术产生了厌恶。这儿有必要厘清技术本身和技术的使用。历史早已证明合理的使用技术带来的好处远远大于其弊端。我们不能因噎废食，从而对人工智能失去信心。这儿就是来看清问题本质的地方！
 
 ## Content of this resource 本资源内容
 
