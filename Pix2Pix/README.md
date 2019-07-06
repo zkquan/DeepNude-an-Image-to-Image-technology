@@ -7,7 +7,7 @@ The experimental results are as follows. The Pix2Pix neural network model is use
 
 [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/abs/1611.07004) 是伯克利大学研究提出的使用条件对抗网络作为图像到图像转换问题的通用技术。该技术一般简写为为pix2pix或者Image-to-Image。DeepNude程序主要使用这种Image-to-Image（Pix2Pix）技术。
 
-实验效果如下，使用Pix2Pix神经网络模型实现[论文](https://arxiv.org/abs/1611.07004)中预定义的任务：黑白简笔画到彩图、平面房屋到立体房屋和航拍图到地图等功能。。
+实验效果如下，使用Pix2Pix神经网络模型实现[论文](https://arxiv.org/abs/1611.07004)中预定义的任务：黑白简笔画到彩图、平面房屋到立体房屋和航拍图到地图等功能。
 
 ![](https://phillipi.github.io/pix2pix/images/teaser_v3.png)
 
