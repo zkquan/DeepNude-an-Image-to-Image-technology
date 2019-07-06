@@ -1,6 +1,6 @@
 # DeepNude-an-Image-to-Image-technology
 
-![](DeepNude/deepnude_logo.png)
+![](paper_images/image2image_logo.png)
 
 This repository contains the core algorithms of DeepNude, and more importantly, the general Image-to-Image theory and practice behind DeepNude.
 
@@ -9,7 +9,7 @@ This repository contains the core algorithms of DeepNude, and more importantly, 
 ## What is DeepNude? 什么是 DeepNude?
 DeepNude uses a slightly modified version of the [pix2pixHD](https://github.com/NVIDIA/pix2pixHD) GAN architecture, quoted from [deepnude_official](https://github.com/deepinstruction/deepnude_official). The pix2pixHD(proposed by NVIDIA) can be used for turning semantic label maps into photo-realistic images or synthesizing portraits from face label maps. Obviously DeepNude is the wrong application of artificial intelligence technology, but it could be useful for researchers and developers working in other fields such as fashion, cinema and visual effects.
 
-DeepNude使用了一个稍微修改过的 [pix2pixHD](https://github.com/NVIDIA/pix2pixHD) GAN 架构，引自 [deepnude_official](https://github.com/deepinstruction/deepnude_official)。 pix2pixHD（由NVIDIA提出）可用于将语义图转换为逼真的图像或合成肖像。显然，DeepNude是人工智能技术的错误应用，但它对于在时尚，电影和视觉效果等其他领域工作的研究人员和开发人员非常有用。
+DeepNude使用了一个稍微修改过的 [pix2pixHD](https://github.com/NVIDIA/pix2pixHD) GAN 架构，引自 [deepnude_official](https://github.com/deepinstruction/deepnude_official)。 pix2pixHD（由NVIDIA提出）可用于将语义图（语义图是一幅不同色块代表不同物体的图片）转换为逼真的图像或合成肖像。显然，DeepNude是人工智能技术的错误应用，但它对于在时尚，电影和视觉效果等其他领域工作的研究人员和开发人员非常有用。
 
 ---
 
@@ -31,7 +31,7 @@ This section provides a demo of Image-to-Image Demo: Black and white stick figur
 
 这一部分提供一个试玩的 Image-to-Image Demo：黑白简笔画到色彩丰富的猫、鞋、手袋。DeepNude 软件主要使用了Image-to-Image技术，该技术理论上可以把你输入的图片转换成任何你想要的图片。你可以点击下方的Image-to-Image Demo在浏览器中体验Image-to-Image技术。
 
-[Image-to-Image Demo](https://affinelayer.com/pixsrv/)
+[Try Image-to-Image Demo](https://affinelayer.com/pixsrv/)
 
 An example of using this demo is as follows：
 
@@ -106,9 +106,6 @@ Get high resolution images from the semantic map. The semantic graph is a color 
 CycleGAN uses a cycle consistency loss to enable training without the need for paired data. In other words, it can translate from one domain to another without a one-to-one mapping between the source and target domain. This opens up the possibility to do a lot of interesting tasks like photo-enhancement, image colorization, style transfer, etc. All you need is the source and the target dataset.
 
 CycleGAN使用循环一致性损失函数来实现训练，而无需配对数据。换句话说，它可以从一个域转换到另一个域，而无需在源域和目标域之间进行一对一映射。这开启了执行许多有趣任务的可能性，例如照片增强，图像着色，样式传输等。您只需要源和目标数据集。
-
-![](paper_images/2017_Zhu_CycleGAN_examples_horse2zebra.gif)
-horse2zebra 马变斑马
 
 ### 4. Image Inpainting 图像修复
 

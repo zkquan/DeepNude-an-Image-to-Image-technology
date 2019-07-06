@@ -1,5 +1,7 @@
 ## DeepNude software itself
 
+![](deepnude_logo.png)
+
 After researching DeepNude technology, I have removed data related to DeepNude. Please don't ask me to get DeepNude program.
 
 ### DeepNude's technology stack
