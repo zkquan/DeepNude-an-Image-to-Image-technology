@@ -1,15 +1,15 @@
 # DeepNude-an-Image-to-Image-technology
 
-![](paper_images/image2image_logo.png)
+![](paper_images/Image2Image_logo.png)
 
-This repository contains the core algorithms of DeepNude, and more importantly, the general Image-to-Image theory and practice behind DeepNude.
+This repository contains the pix2pixHD algorithms(proposed by NVIDIA) of DeepNude, and more importantly, the general Image-to-Image theory and practice behind DeepNude.
 
-这个仓库包含DeepNude的核心算法，更重要的是DeepNude背后的通用的Image-to-Image理论与实践研究。
+这个仓库包含DeepNude的pix2pixHD(由英伟达提出)算法，更重要的是DeepNude背后的通用的Image-to-Image理论与实践研究。
 
 ## What is DeepNude? 什么是 DeepNude?
-DeepNude uses a slightly modified version of the [pix2pixHD](https://github.com/NVIDIA/pix2pixHD) GAN architecture, quoted from [deepnude_official](https://github.com/deepinstruction/deepnude_official). The pix2pixHD(proposed by NVIDIA) can be used for turning semantic label maps into photo-realistic images or synthesizing portraits from face label maps. Obviously DeepNude is the wrong application of artificial intelligence technology, but it could be useful for researchers and developers working in other fields such as fashion, cinema and visual effects.
+DeepNude uses a slightly modified version of the [pix2pixHD](https://github.com/NVIDIA/pix2pixHD) GAN architecture, quoted from deepnude_official. pix2pixHD is a general-purpose Image2Image technology proposed by NVIDIA. Obviously, DeepNude is the wrong application of artificial intelligence technology, but it uses Image2Image technology for researchers and developers working in other fields such as fashion, film and visual effects.
 
-DeepNude使用了一个稍微修改过的 [pix2pixHD](https://github.com/NVIDIA/pix2pixHD) GAN 架构，引自 [deepnude_official](https://github.com/deepinstruction/deepnude_official)。 pix2pixHD（由NVIDIA提出）可用于将语义图（语义图是一幅不同色块代表不同物体的图片）转换为逼真的图像或合成肖像。显然，DeepNude是人工智能技术的错误应用，但它对于在时尚，电影和视觉效果等其他领域工作的研究人员和开发人员非常有用。
+DeepNude使用了一个稍微修改过的 [pix2pixHD](https://github.com/NVIDIA/pix2pixHD) GAN 架构。pix2pixHD是由NVIDIA提出的一种通用的Image2Image技术。显然，DeepNude是人工智能技术的错误应用，但它使用的Image2Image技术对于在时尚，电影和视觉效果等其他领域工作的研究人员和开发人员非常有用。
 
 ---
 
@@ -49,8 +49,7 @@ In the left side box, draw a cat as you imagine, and then click the process butt
 |Title|Content|
 |-|-|
 |[DeepNude_software_itself](DeepNude_software_itself)|DeepNude software usage process and evaluation of advantages and disadvantages. DeepNude 软件的使用过程和优缺点评价。|
-|[Official DeepNude Algorithm(Based on Pytorch)](https://github.com/deepinstruction/deepnude_official)|官方版本DeepNude算法（基于Pytorch）|
-|DeepNude Algorithm(Based on TensorFlow 2)|Under development|
+| ~~Official DeepNude Algorithm(Based on Pytorch)~~ |官方版本DeepNude算法（基于Pytorch）|
 
 ---
 
