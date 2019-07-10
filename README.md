@@ -148,6 +148,14 @@ The CycleGAN neural network model is used to realize the four functions of photo
 
 [Click Start Experience 3](CycleGAN)
 
+### DCGAN
+
+DCGAN is used to achieve random number to image generation tasks, such as face generation.
+
+使用DCGAN来实现随机数到图片生成任务，比如人脸生成。
+
+[Click Start Experience DCGAN](DCGAN)
+
 ---
 
 ## Future
