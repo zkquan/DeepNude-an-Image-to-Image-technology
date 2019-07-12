@@ -49,3 +49,8 @@ python inference_by_dcgan_model.py
 ![](img_align_celeba_example/000002.jpg)
 
 ![](img_align_celeba_example/000003.jpg)
+
+
+## Relevant Reading of Variational Autoencoder
+
++ [生成式对抗网络](https://yuanxiaosc.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/)

@@ -140,7 +140,7 @@ Use the Pix2Pix model (Conditional Adversarial Networks) to implement black and 
 
 Under development...
 
-### 3. CycleGAN for Image-to-Image
+### 3. CycleGAN
 
 The CycleGAN neural network model is used to realize the four functions of photo style conversion, photo effect enhancement, landscape season change, and object conversion.
 
@@ -148,13 +148,16 @@ The CycleGAN neural network model is used to realize the four functions of photo
 
 [Click Start Experience 3](CycleGAN)
 
-### DCGAN
+### 4. DCGAN
 
-DCGAN is used to achieve random number to image generation tasks, such as face generation.
+DCGAN is used to achieve random number to image generation tasks, such as face generation. 使用DCGAN来实现随机数到图片生成任务，比如人脸生成。
 
-使用DCGAN来实现随机数到图片生成任务，比如人脸生成。
+[Click Start Experience 4](DCGAN)
 
-[Click Start Experience DCGAN](DCGAN)
+### 5. Variational Autoencoder (VAE)
+VAE is used to achieve random number to image generation tasks, such as face generation. 使用DCGAN来实现随机数到图片生成任务，比如人脸生成。
+
+[Click Start Experience 5](VAE)
 
 ---
 
