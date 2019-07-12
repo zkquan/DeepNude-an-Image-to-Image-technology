@@ -1,4 +1,4 @@
-# CycleGAN
+# Cycle-Consistent Adversarial Networks (CycleGAN)
 > If you have interesting ideas or data, please contact me quickly at wangzichaochaochao@gmail.com .
 
 ![](https://github.com/yuanxiaosc/DeepNude-an-Image-to-Image-technology/raw/master/paper_images/2017_Zhu_CycleGAN_examples_horse2zebra.gif)

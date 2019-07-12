@@ -1,4 +1,4 @@
-# CycleGAN
+# Deep Convolutional Generative Adversarial Network (DCGAN)
 > If you have interesting ideas or data, please contact me quickly at wangzichaochaochao@gmail.com .
 
 
