@@ -1,8 +1,8 @@
-## Future
+# Future
 
 In fact, we don't need Image-to-Image. We can use [GANs](https://arxiv.org/abs/1406.2661) to generate images directly from random values or generate images from text.
 
-### 1. [Obj-GAN](https://github.com/jamesli1618/Obj-GAN)
+## 1. [Obj-GAN](https://github.com/jamesli1618/Obj-GAN)
 
 The new AI technology Obj-GAN developed by Microsoft Research AI understands natural language descriptions, sketches, composite images, and then refines the details based on individual words provided by sketch frames and text. In other words, the network can generate images of the same scene based on textual descriptions that describe everyday scenes.
 
@@ -17,7 +17,7 @@ The new AI technology Obj-GAN developed by Microsoft Research AI understands nat
 ![](https://raw.githubusercontent.com/jamesli1618/Obj-GAN/master/framework.png)
 
 
-### 2. [StoryGAN](https://github.com/yitong91/StoryGAN)
+## 2. [StoryGAN](https://github.com/yitong91/StoryGAN)
 
 [Advanced version of the pen: just one sentence, one story, you can generate a picture](https://www.microsoft.com/en-us/research/blog/a-picture-from-a-dozen-words-a-drawing-bot-for-realizing-everyday-scenes-and-even-stories/).
 > Microsoft's new research proposes a new GAN, ObjGAN, which can generate complex scenes based on textual descriptions. They also proposed another GAN, StoryGAN, which can draw a story. Enter the text of a story and output the "picture book".

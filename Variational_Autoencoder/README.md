@@ -56,6 +56,7 @@ python inference_by_vae_model.py
 The above simple Convolutional Variational Autoencoder can only generate blurred face images. If you want to get better results, we recommend VQ-VAE-2, which can generate the following high-definition images.
 
 上述简单的卷积变分自编码器只能生成模糊的人脸图片，如果你想获得更好的效果，推荐使用VQ-VAE-2，它能生成如下的高清图像。
+
 ![](VQ-VAE-2_example.png)
 
 + Paper [Generating Diverse High-Fidelity Images with VQ-VAE-2](https://arxiv.org/abs/1906.00446)
