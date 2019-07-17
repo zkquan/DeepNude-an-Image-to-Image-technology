@@ -25,6 +25,8 @@ We’ll traverse it one step at a time. Let the journey begin.
 
 ![](2014-2019_GAN_Face_Generation.jpg)
 
+Papers corresponding to the figure above 上图对应的论文
+
 1. https://arxiv.org/abs/1406.2661  
 2. https://arxiv.org/abs/1511.06434  
 3. https://arxiv.org/abs/1606.07536  
