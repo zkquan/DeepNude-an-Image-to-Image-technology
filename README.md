@@ -1,11 +1,12 @@
 # DeepNude-an-Image-to-Image-technology
-> This resource includes the TensorFlow2 implementation of models such as pix2pix, CycleGAN, DCGAN, and VAE. 本资源包含pix2pix、CycleGAN、DCGAN、VAE等模型的TensorFlow2实现。
 
 ![](paper_images/Image2Image_logo.png)
 
 This repository contains the pix2pixHD algorithms(proposed by NVIDIA) of DeepNude, and more importantly, the general image generation theory and practice behind DeepNude.
 
 这个仓库包含DeepNude的pix2pixHD(由英伟达提出)算法，更重要的是DeepNude背后通用的图像生成理论与实践研究。
+
+> This resource includes the TensorFlow2 implementation of image generation models such as pix2pix, CycleGAN, DCGAN, and VAE. 本资源包含pix2pix、CycleGAN、DCGAN、VAE等图像生成模型的 [TensorFlow2](https://www.tensorflow.org/) 实现。
 
 ## What is DeepNude? 什么是 DeepNude?
 DeepNude uses a slightly modified version of the [pix2pixHD](https://github.com/NVIDIA/pix2pixHD) GAN architecture, quoted from deepnude_official. pix2pixHD is a general-purpose Image2Image technology proposed by NVIDIA. Obviously, DeepNude is the wrong application of artificial intelligence technology, but it uses Image2Image technology for researchers and developers working in other fields such as fashion, film and visual effects.
@@ -157,7 +158,7 @@ In the image interface of [Image_Inpainting(NVIDIA_2018).mp4](https://github.com
 ---
 
 ## Image Generation Practice Research
-> More models and functions will be added in the future.
+> These models are based on the latest implementation of TensorFlow2.
 
 This section explains DeepNude-related AI/Deep Learning (especially computer vision) code practices, and if you like to experiment, enjoy them.
 
@@ -198,6 +199,10 @@ VAE is used to achieve random number to image generation tasks, such as face gen
 Use VGG19 to achieve image style migration effects, such as photo changes to oil paintings and comics. 使用VGG19来实现图片风格迁移效果，比如照片变油画、漫画。
 
 [Click Start Experience 6](Neural_style_transfer)
+
+..........................................................................
+
+如果你是使用[PaddlePaddle](https://github.com/PaddlePaddle/Paddle)的用户，可以参考以上模型的Paddle版本 [图像生成模型库 PaddleGAN](https://github.com/PaddlePaddle/models/tree/develop/PaddleCV/PaddleGAN)。
 
 ---
 
