@@ -15,10 +15,12 @@ This is implemented by optimizing the output image to match the content statisti
 
 **House Content Picture A+ Van Gogh Style Picture B=Van Gogh Style House Picture**
 **房子内容图片A+梵高风格图片B=梵高风格房子图片**
+
 ![](style_transfer_example.png)
 
 **House content picture A + night style picture B = night style house picture**
 **房子内容图片A+黑夜风格图片B=黑夜风格房子图片**
+
 ![](A1.png)
 ![](B1.png)
 ![](AB1.png)
