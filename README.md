@@ -21,7 +21,8 @@ DeepNude使用了一个稍微修改过的 [pix2pixHD](https://github.com/NVIDIA/
 |-|-|
 |What is DeepNude?|什么是 DeepNude?|
 |Fake Image Generation and Image-to-Image Demo |试玩Demo|
-|DeepNude Algorithm|               DeepNude算法|
+|DeepNude Algorithm|Image2Image技术的错误应用|
+|NSFW(Not Safe/Suitable For Work)|Image2Image技术的正确应用|
 |Image Generation Theoretical Research|  图像生成理论研究|
 |Image Generation Practice Research|     图像生成实践研究|
 |Future|					                     展望未来|
@@ -64,6 +65,13 @@ In the left side box, draw a cat as you imagine, and then click the process butt
 |-|-|
 |[DeepNude_software_itself](DeepNude_software_itself)|DeepNude software usage process and evaluation of advantages and disadvantages. DeepNude 软件的使用过程和优缺点评价。|
 | ~~Official DeepNude Algorithm(Based on Pytorch)~~ |官方版本DeepNude算法（基于Pytorch）|
+
+### NSFW
+> The role of NSFW is the opposite of that of DeepNude. NSFW 的作用与DeepNude作用相反。
+
+NSFW(Not Safe/Suitable For Work) is a large-scale image dataset containing five categories of images [porn, hentai, sexy, natural, drawings]. Here, CycleGAN is used to convert different types of images, such as porn->natural. 使用CycleGAN神经网络模型实现 [porn, hentai, sexy, natural, drawings] 这些类别图像的转换，比如色情图像到安全中性的图像转换。
+
+[Click Start NSFW](NSFW)
 
 ---
 
