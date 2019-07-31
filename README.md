@@ -2,16 +2,9 @@
 
 ![](paper_images/Image2Image_logo.png)
 
-This repository contains the pix2pixHD algorithms(proposed by NVIDIA) of DeepNude, and more importantly, the general image generation theory and practice behind DeepNude.
+This repository contains the pix2pixHD algorithms(proposed by NVIDIA) of DeepNude, and more importantly, the general image generation theory and practice behind DeepNude. This resource includes the TensorFlow2 implementation of image generation models such as pix2pix, CycleGAN, DCGAN, and VAE.
 
-这个仓库包含DeepNude的pix2pixHD(由英伟达提出)算法，更重要的是DeepNude背后通用的图像生成理论与实践研究。
-
-> This resource includes the TensorFlow2 implementation of image generation models such as pix2pix, CycleGAN, DCGAN, and VAE. 本资源包含pix2pix、CycleGAN、DCGAN、VAE等图像生成模型的 [TensorFlow2](https://www.tensorflow.org/) 实现。
-
-## What is DeepNude? 什么是 DeepNude?
-DeepNude uses a slightly modified version of the [pix2pixHD](https://github.com/NVIDIA/pix2pixHD) GAN architecture, quoted from deepnude_official. pix2pixHD is a general-purpose Image2Image technology proposed by NVIDIA. Obviously, DeepNude is the wrong application of artificial intelligence technology, but it uses Image2Image technology for researchers and developers working in other fields such as fashion, film and visual effects.
-
-DeepNude使用了一个稍微修改过的 [pix2pixHD](https://github.com/NVIDIA/pix2pixHD) GAN 架构。pix2pixHD是由NVIDIA提出的一种通用的Image2Image技术。显然，DeepNude是人工智能技术的错误应用，但它使用的Image2Image技术对于在时尚，电影和视觉效果等其他领域工作的研究人员和开发人员非常有用。
+这个仓库包含DeepNude的pix2pixHD(由英伟达提出)算法，更重要的是DeepNude背后通用的图像生成理论与实践研究。本资源包含pix2pix、CycleGAN、DCGAN、VAE等图像生成模型的 [TensorFlow2](https://www.tensorflow.org/) 实现。
 
 ---
 
@@ -21,11 +14,19 @@ DeepNude使用了一个稍微修改过的 [pix2pixHD](https://github.com/NVIDIA/
 |-|-|
 |What is DeepNude?|什么是 DeepNude?|
 |Fake Image Generation and Image-to-Image Demo |试玩Demo|
-|DeepNude Algorithm|Image2Image技术的错误应用|
-|NSFW(Not Safe/Suitable For Work)|Image2Image技术的正确应用|
+|DeepNude Algorithm: Normal to Pornography Image|由正常图像生成色情图像|
+|NSFW: Pornography to Normal Image, Pornographic Image Detection|由色情图像生成正常图像，色情图像检测|
 |Image Generation Theoretical Research|  图像生成理论研究|
 |Image Generation Practice Research|     图像生成实践研究|
+|DeepNude to DeepFakes|DeepNude 进阶 DeepFakes|
 |Future|					                     展望未来|
+
+---
+
+## What is DeepNude? 什么是 DeepNude?
+DeepNude uses a slightly modified version of the [pix2pixHD](https://github.com/NVIDIA/pix2pixHD) GAN architecture, quoted from deepnude_official. pix2pixHD is a general-purpose Image2Image technology proposed by NVIDIA. Obviously, DeepNude is the wrong application of artificial intelligence technology, but it uses Image2Image technology for researchers and developers working in other fields such as fashion, film and visual effects.
+
+DeepNude使用了一个稍微修改过的 [pix2pixHD](https://github.com/NVIDIA/pix2pixHD) GAN 架构。pix2pixHD是由NVIDIA提出的一种通用的Image2Image技术。显然，DeepNude是人工智能技术的错误应用，但它使用的Image2Image技术对于在时尚，电影和视觉效果等其他领域工作的研究人员和开发人员非常有用。
 
 ---
 
@@ -35,9 +36,9 @@ This section provides a fake image generation demo that you can use as you wish.
 
 这部分提供一个试玩的假图片生成Demo，你可以随心所欲的使用它们。它们是由StyleGAN生成的假图片，没有任何版权问题。每次刷新网页都会生成新的假图像，注意保存！
 
-+ [点击生成假人图像  Click to generate fake person image](https://thispersondoesnotexist.com/)
-+ [点击生成假猫图像  Click to generate fake cat image](http://thesecatsdonotexist.com/)
-+ [点击生成假老婆图像  Click to generate fake waifu image](https://www.thiswaifudoesnotexist.net/)
++ [Click to generate fake person image 点击生成假人图像](https://thispersondoesnotexist.com/)
++ [Click to generate fake cat image 点击生成假猫图像](http://thesecatsdonotexist.com/)
++ [Click to generate fake waifu image 点击生成假老婆图像](https://www.thiswaifudoesnotexist.net/)
 
 
 ## Image-to-Image Demo
@@ -61,17 +62,18 @@ In the left side box, draw a cat as you imagine, and then click the process butt
 ## :underage: DeepNude Algorithm
 > DeepNude is a pornographic software that is forbidden by minors. If you are not interested in DeepNude itself, you can skip this section and see the general Image-to-Image theory and practice in the following chapters. DeepNude 是一款含有色情的软件，未成年人禁止使用。如果你对DeepNude本身不感兴趣，可以直接跳过本节，查看后面章节中通用的Image-to-Image理论与实践研究。
 
-|Title|Content|
-|-|-|
-|[DeepNude_software_itself](DeepNude_software_itself)|DeepNude software usage process and evaluation of advantages and disadvantages. DeepNude 软件的使用过程和优缺点评价。|
-| ~~Official DeepNude Algorithm(Based on Pytorch)~~ |官方版本DeepNude算法（基于Pytorch）|
++ [DeepNude_software_itself](DeepNude_software_itself) DeepNude software usage process and evaluation of advantages and disadvantages.
++ ~~Official DeepNude Algorithm(Based on Pytorch)~~
 
-### NSFW
-> The role of NSFW is the opposite of that of DeepNude. NSFW 的作用与DeepNude作用相反。
 
-NSFW(Not Safe/Suitable For Work) is a large-scale image dataset containing five categories of images [porn, hentai, sexy, natural, drawings]. Here, CycleGAN is used to convert different types of images, such as porn->natural. 使用CycleGAN神经网络模型实现 [porn, hentai, sexy, natural, drawings] 这些类别图像的转换，比如色情图像到安全中性的图像转换。
+### :+1: NSFW
+> Recognition and conversion of five types of images [porn, hentai, sexy, natural, drawings]. Correct application of image-to-image technology.
 
-[Click Start NSFW](NSFW)
+NSFW(Not Safe/Suitable For Work) is a large-scale image dataset containing five categories of images [porn, hentai, sexy, natural, drawings]. Here, CycleGAN is used to convert different types of images, such as porn->natural. 使用CycleGAN神经网络模型实现 [porn, hentai, sexy, natural, drawings] 这些类别图像的转换，比如色情图像到安全/中性的图像转换。
+
+[Click to try pornographic image detection Demo 点击尝试色情图片检测](https://nsfwjs.com/)
+
+[Click Start NSFW Research](NSFW)
 
 ---
 
@@ -82,6 +84,8 @@ This section describes DeepNude-related AI/Deep Learning theory (especially comp
 这一部分阐述DeepNude相关的人工智能/深度学习理论（特别是计算机视觉）研究，如果你喜欢阅读论文使用最新论文成果，尽情享用吧。
 
 [Click here to systematically understand GAN](GAN_History)
+
+[Click here to systematically image-to-image-papers](https://github.com/lzhbrian/image-to-image-papers/blob/master/README.md)
 
 ### 1. Pix2Pix
 
@@ -211,6 +215,30 @@ Use VGG19 to achieve image style migration effects, such as photo changes to oil
 ..........................................................................
 
 如果你是使用[PaddlePaddle](https://github.com/PaddlePaddle/Paddle)的用户，可以参考以上模型的Paddle版本 [图像生成模型库 PaddleGAN](https://github.com/PaddlePaddle/models/tree/develop/PaddleCV/PaddleGAN)。
+
+---
+
+## DeepFakes (Promotion of DeepNude)
+> DeepFakes can be seen as an upgraded version of DeepNude, which uses a deep learning model to generate a series of techniques that can be faked, such as fake images, fake audio, and fake videos. DeepFakes可以看做是DeepNude的升级版，它包含使用深度学习模型生成一系列可以以假乱真的东西技术，例如假的图像、假的音频和假的视频。
+
+### Realistic Speech-Driven Facial Animation with GANs
+One photo + One audio = Composite Video
+
+We propose a temporal GAN capable of producing animated faces using only a still image of a person and an audio clip containing speech. The videos generated using this model do not only produce lip movements that are synchronized with the audio but also exhibit characteristic facial expressions such as blinks, brow raises etc. This extends our previous model by separately dealing with audio-visual synchronization and expression generation. Our improved model works on "in-the-wild" unseen faces and is capable of capturing the emotion of the speaker and reflecting it in the facial expression.
+
+一张照片 + 一段音频 = 合成视频
+
+我们提出了一种 temporal GAN，其能够仅使用人的静止图像和包含语音的音频剪辑来产生动画面部。 使用此模型生成的视频不仅可以产生与音频同步的唇部动作，还可以呈现特有的面部表情，例如眨眼，眉毛等，同时能够捕捉说话者的情绪并将其反映在面部表情中。
+
++ 论文 Samsung and Imperial College London 2019 paper [Realistic Speech-Driven Facial Animation with GANs](https://arxiv.org/abs/1906.06337)
++ 主页 [Facial Animation homepage](https://sites.google.com/view/facial-animation)
++ 代码 code [Speech-Driven Animation](https://github.com/DinoMan/speech-driven-animation)
++ [中文版论文浅析](https://www.infoq.cn/article/CM72xuNm35pNdrw7p_yT?utm_source=related_read&utm_medium=article) [English version paper analysis](https://www.theverge.com/2019/6/20/18692671/deepfake-technology-singing-talking-video-portrait-from-a-single-image-imperial-college-samsung)
+
+
+**Interested in DeepFakes?**
+
+[Click to start systematic learning DeepFakes](DeepFakes)
 
 ---
 
