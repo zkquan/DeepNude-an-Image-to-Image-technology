@@ -2,9 +2,9 @@
 
 ![](paper_images/Image2Image_logo.png)
 
-This repository contains the pix2pixHD algorithms(proposed by NVIDIA) of DeepNude, and more importantly, the general image generation theory and practice behind DeepNude. This resource includes the TensorFlow2 implementation of image generation models such as pix2pix, CycleGAN, DCGAN, and VAE.
+This repository contains the pix2pixHD algorithms(proposed by NVIDIA) of DeepNude, and more importantly, the general image generation theory and practice behind DeepNude. This resource includes the TensorFlow2 implementation of image generation models such as pix2pix, CycleGAN, UGATIT, DCGAN, and VAE.
 
-这个仓库包含DeepNude的pix2pixHD(由英伟达提出)算法，更重要的是DeepNude背后通用的图像生成理论与实践研究。本资源包含pix2pix、CycleGAN、DCGAN、VAE等图像生成模型的 [TensorFlow2](https://www.tensorflow.org/) 实现。
+这个仓库包含DeepNude的pix2pixHD(由英伟达提出)算法，更重要的是DeepNude背后通用的图像生成理论与实践研究。本资源包含pix2pix、CycleGAN、UGATIT、DCGAN、VAE等图像生成模型的 [TensorFlow2](https://www.tensorflow.org/) 实现。
 
 ---
 
@@ -133,7 +133,22 @@ CycleGAN uses a cycle consistency loss to enable training without the need for p
 
 CycleGAN使用循环一致性损失函数来实现训练，而无需配对数据。换句话说，它可以从一个域转换到另一个域，而无需在源域和目标域之间进行一对一映射。这开启了执行许多有趣任务的可能性，例如照片增强，图像着色，样式传输等。您只需要源和目标数据集。
 
-### 4. StyleGAN
+### 4. UGATIT
+
++ 论文 NCSOFT 2019 paper [Unsupervised Generative Attentional Networks with Adaptive Layer-Instance Normalization for Image-to-Image Translation](https://github.com/taki0112/UGATIT)
++ 代码 code [UGATIT-TensorFlow](https://github.com/taki0112/UGATIT)  | [UGATIT-Pytorch](https://github.com/znxlwm/UGATIT-pytorch)
++ [UGATIT 原理解析](https://zhuanlan.zhihu.com/p/76936166)
++ [UGATIT 实验复现](https://zhuanlan.zhihu.com/p/76979105)
+
+**效果**
+
+![](paper_images/2019_NCSOFT_UGATIT_example.jpg)
+
+UGATIT is a novel method for unsupervised image-to-image translation, which incorporates a new attention module and a new learnable normalization function in an end-to-end manner. UGATIT can do both image conversions that require Holistic Changes, and image conversions that require Large Shape Changes. It can be seen as an enhanced version of CycleGAN, a more efficient general image conversion framework.
+
+UGATIT是一种新的无监督图像到图像转换方法，它以端到端的方式结合了新的注意模块和新的可学习的归一化功能。UGATIT既可以做需要整体变化 (Holistic Changes) 的图片转换，也可以做需要大幅形状变化 (Large Shape Changes ) 的图片转换。它可以看做CycleGAN的加强版本，是一种效果更好的通用图片转换框架。
+
+### 5. StyleGAN
 
 + 论文 NVIDIA 2019 paper [A Style-Based Generator Architecture for Generative Adversarial Networks](https://arxiv.org/abs/1812.04948)
 + 代码 code [stylegan](https://github.com/NVlabs/stylegan)
@@ -154,7 +169,7 @@ StyleGAN 不仅可以生成假的图片source A 和 source B，还可以结合�
 |中等级|姿势、一般的面部形状和眼镜来自Source A|继承Source B中级的面部特征 ，如发型，张开/闭着的眼睛|
 |高等级（细微）|主要面部内容来自Source A|继承Source B高级面部特征，如颜色方案和微观结构|
 
-### 5. Image Inpainting 图像修复
+### 6. Image Inpainting 图像修复
 
 + 论文 NVIDIA 2018 paper [Image Inpainting for Irregular Holes Using Partial Convolutions](https://arxiv.org/abs/1804.07723) and [Partial Convolution based Padding](https://arxiv.org/abs/1811.11718).
 + 代码 Paper code [partialconv](https://github.com/NVIDIA/partialconv)。
