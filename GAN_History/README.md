@@ -15,7 +15,7 @@ We’ll traverse it one step at a time. Let the journey begin.
 9. BigGAN: Big Generative Adversarial Networks
 10. StyleGAN: Style-based Generative Adversarial Networks
 
-### 2014-2019 years of GAN progress on face generation
+## 2014-2019 years of GAN progress on face generation
 
 2014-2019 [Generative Adversarial Networks - The Story So Far](https://blog.floydhub.com/gans-story-so-far/)
 
@@ -32,3 +32,8 @@ Papers corresponding to the figure above 上图对应的论文
 3. https://arxiv.org/abs/1606.07536  
 4. https://arxiv.org/abs/1710.10196  
 5. https://arxiv.org/abs/1812.04948
+
+## 一文看懂GAN演进图谱
+先放一张GAN家族主要模型的概要图有一个大致的概念。左边部分主要是改进模型解决实际的图片转换，文本转图像，生成图片，视频转换等实际问题；右边部分呢则是主要解决GAN框架本身存在的一些问题。阅读[一文看懂GAN演进图谱](https://zhuanlan.zhihu.com/p/70033932)了解更多。
+
+![](https://pic4.zhimg.com/v2-f6ce32e325de1f56fe06811de767084c_1200x500.jpg)

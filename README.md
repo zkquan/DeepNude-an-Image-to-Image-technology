@@ -1,6 +1,7 @@
 # DeepNude-an-Image-to-Image-technology
+GAN evolution graph 2019 from [here](https://zhuanlan.zhihu.com/p/70033932).
 
-![](paper_images/Image2Image_logo.png)
+![](paper_images/gan_h.jpg)
 
 This repository contains the pix2pixHD algorithms(proposed by NVIDIA) of DeepNude, and more importantly, the general image generation theory and practice behind DeepNude. This resource includes the TensorFlow2 implementation of image generation models such as pix2pix, CycleGAN, UGATIT, DCGAN, and VAE.
 
