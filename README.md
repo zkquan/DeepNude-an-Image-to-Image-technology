@@ -3,9 +3,9 @@ GAN evolution graph 2019 from [here](https://zhuanlan.zhihu.com/p/70033932).
 
 ![](paper_images/gan_h.jpg)
 
-This repository contains the pix2pixHD algorithms(proposed by NVIDIA) of DeepNude, and more importantly, the general image generation theory and practice behind DeepNude. This resource includes the TensorFlow2 implementation of image generation models such as pix2pix, CycleGAN, UGATIT, DCGAN, and VAE.
+This repository contains the pix2pixHD algorithms(proposed by NVIDIA) of DeepNude, and more importantly, the general image generation theory and practice behind DeepNude. This resource includes the TensorFlow2 (Pytorch | PaddlePaddle) implementation of image generation models such as pix2pix, CycleGAN, UGATIT, DCGAN, SinGAN and VAE.
 
-这个仓库包含DeepNude的pix2pixHD(由英伟达提出)算法，更重要的是DeepNude背后通用的图像生成理论与实践研究。本资源包含pix2pix、CycleGAN、UGATIT、DCGAN、VAE等图像生成模型的 [TensorFlow2](https://www.tensorflow.org/) 实现。
+这个仓库包含DeepNude的pix2pixHD(由英伟达提出)算法，更重要的是DeepNude背后通用的图像生成理论与实践研究。本资源包含pix2pix、CycleGAN、UGATIT、DCGAN、SinGAN、VAE等图像生成模型的 [TensorFlow2](https://www.tensorflow.org/) (Pytorch | PaddlePaddle) 实现。
 
 ---
 
@@ -17,8 +17,8 @@ This repository contains the pix2pixHD algorithms(proposed by NVIDIA) of DeepNud
 |Fake Image Generation and Image-to-Image Demo |试玩Demo|
 |DeepNude Algorithm: Normal to Pornography Image|由正常图像生成色情图像|
 |NSFW: Pornography to Normal Image, Pornographic Image Detection|由色情图像生成正常图像，色情图像检测|
-|Image Generation Theoretical Research|  图像生成理论研究|
-|Image Generation Practice Research|     图像生成实践研究|
+|GAN Image Generation Theoretical Research|  GAN 图像生成理论研究|
+|GAN Image Generation Practice Research|  GAN 图像生成实践研究|
 |DeepNude to DeepFakes|DeepNude 进阶 DeepFakes|
 |Future|					                     展望未来|
 
@@ -181,7 +181,25 @@ StyleGAN 不仅可以生成假的图片source A 和 source B，还可以结合�
 
 In the image interface of [Image_Inpainting(NVIDIA_2018).mp4](https://github.com/yuanxiaosc/DeepNude-an-Image-to-Image-technology/raw/master/paper_images/Image_Inpainting(NVIDIA_2018).mp4) video, you only need to use tools to simply smear the unwanted content in the image. Even if the shape is very irregular, NVIDIA's model can “restore” the image with very realistic The picture fills the smeared blank. It can be described as a one-click P picture, and "no ps traces." The study was based on a team from Nvidia's Guilin Liu et al. who published a deep learning method that could edit images or reconstruct corrupted images, even if the images were worn or lost pixels. This is the current 2018 state-of-the-art approach.
 
-在 [Image_Inpainting(NVIDIA_2018).mp4](https://github.com/yuanxiaosc/DeepNude-an-Image-to-Image-technology/raw/master/paper_images/Image_Inpainting(NVIDIA_2018).mp4) 视频中左侧的操作界面，只需用工具将图像中不需要的内容简单涂抹掉，哪怕形状很不规则，NVIDIA的模型能够将图像“复原”，用非常逼真的画面填补被涂抹的空白。可谓是一键P图，而且“毫无ps痕迹”。该研究来自Nvidia的Guilin Liu等人的团队，他们发布了一种可以编辑图像或重建已损坏图像的深度学习方法，即使图像穿了个洞或丢失了像素。这是目前2018 state-of-the-art的方法。
+在 [Image_Inpainting(NVIDIA_2018).mp4](https://github.com/yuanxiaosc/DeepNude-an-Image-to-Image-technology/raw/master/paper_images/Image_Inpainting(NVIDIA_2018).mp4) 视频中左侧的操作界面，只需用工具将图像中不需要的内容简单涂抹掉，哪怕形状很不规则，NVIDIA的模型能够将图像“复原”，用非常逼真的画面填补被涂抹的空白。可谓是一键P图，而且“毫无ps痕迹”。该研究来自Nvidia的Guilin Liu等人的团队，他们发布了一种可以编辑图像或重建已损坏图像的深度学习方法，即使图像穿了个洞或丢失了像素。这是2018 state-of-the-art的方法。
+
+### 7. SinGAN
+ICCV2019 Best paper - Marr prize
+
++ 论文 Israel Institute of Technology 2019 paper [SinGAN: Learning a Generative Model from a Single Natural Image](https://arxiv.org/abs/1905.01164)
++ 主页 [SinGAN homepage](http://webee.technion.ac.il/people/tomermic/SinGAN/SinGAN.htm)
++ 代码 code [SinGAN-Pytorch](https://github.com/tamarott/SinGAN)
++ 视频展示 Video Show [SinGAN for single image animation](https://youtu.be/xk8bWLZk4DU)
++ [SinGAN 原理解析](https://www.jiqizhixin.com/articles/2019-10-29-2)
+
+**效果**
+
+![](paper_images/2019_Tamar_SinGAN_example.png)
+We introduce SinGAN, an unconditional generative model that can be learned from a single natural image. Our model is trained to capture the internal distribution of patches within the image, and is then able to generate high quality, diverse samples that carry the same visual content as the image. SinGAN contains a pyramid of fully convolutional GANs, each responsible for learning the patch distribution at a different scale of the image. This allows generating new samples of arbitrary size and aspect ratio, that have significant variability, yet maintain both the global structure and the fine textures of the training image. In contrast to previous single image GAN schemes, our approach is not limited to texture images, and is not conditional (i.e. it generates samples from noise). User studies confirm that the generated samples are commonly confused to be real images. We illustrate the utility of SinGAN in a wide range of image manipulation tasks.
+
+在这篇论文中，研究者介绍了一种无监督的生成模型 SinGAN，它以一种无条件约束的方式从单张自然图像中学习知识。经过训练，研究者的模型能捕捉图像块（patch）的内部分布，从而生成高质量、多样化的样本，并承载与训练图像相同的视觉内容。
+
+SinGAN 包含一个全卷积金字塔 GAN，金字塔的每一层负责学习不同比例的图像块分布。这样就能生成具有任意大小和横纵比的新样本，这种生成样本明显具有可变性，但同时又能保持真实图像的全局结构与精细纹理。与之前的单图像 GAN 相比，研究者的方法不仅能生成纹理图像，同时它还以一种无条件约束的方式生成。SinGAN 通过使用多尺度对抗训练方案，从多种尺度学习了图像块信息。这样一来，模型就可以生成新的真实图像样本，其中在创建新的目标属性和结构的同时还保留了原始的图像块分布信息。如上展示了不同尺度图像的生成效果。研究者在最后还表明，SinGAN 生成的图像经常被人类弄混，它们与真实图像没什么差别。
 
 ---
 

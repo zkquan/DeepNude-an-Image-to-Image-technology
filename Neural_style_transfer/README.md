@@ -25,7 +25,7 @@ This repository uses deep learning to compose one image in the style of another 
 ### Require
 
 + python 3+, e.g. python==3.6
-+ tensorflow version 2, e.g. tensorflow==2.0.0-beta1
++ tensorflow version 2, e.g. tensorflow==2.0.0
 
 ### Use Model
 
