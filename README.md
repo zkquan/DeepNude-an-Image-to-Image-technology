@@ -1,11 +1,11 @@
 # DeepNude-an-Image-to-Image-technology
-GAN evolution graph 2019 from [here](https://zhuanlan.zhihu.com/p/70033932).
+GAN evolution graph 2020.
 
-![](paper_images/gan_h.jpg)
+![](paper_images/GAN_2020.png)
 
-This repository contains the pix2pixHD algorithms(proposed by NVIDIA) of [DeepNude](DeepNude_software_itself), and more importantly, the general image generation theory and practice behind DeepNude. This resource includes the TensorFlow2 (Pytorch | PaddlePaddle) implementation of image generation models such as [pix2pix](Pix2Pix), [CycleGAN](CycleGAN), UGATIT, [DCGAN](DCGAN), SinGAN and [VAE](Variational_Autoencoder).
+This repository contains the pix2pixHD algorithms(proposed by NVIDIA) of [DeepNude](DeepNude_software_itself), and more importantly, the general image generation theory and practice behind DeepNude. This resource includes the TensorFlow2 (Pytorch | PaddlePaddle) implementation of image generation models such as [pix2pix](Pix2Pix), [CycleGAN](CycleGAN), UGATIT, [DCGAN](DCGAN), SinGAN, [VAE](Variational_Autoencoder), ALAE and mGANprior.
 
-这个仓库包含[DeepNude](DeepNude_software_itself)的pix2pixHD(由英伟达提出)算法，更重要的是DeepNude背后通用的图像生成理论与实践研究。本资源包含[pix2pix](Pix2Pix), [CycleGAN](CycleGAN), UGATIT, [DCGAN](DCGAN), SinGAN and [VAE](Variational_Autoencoder).等图像生成模型的 [TensorFlow2](https://www.tensorflow.org/) (Pytorch | PaddlePaddle) 实现。
+这个仓库包含[DeepNude](DeepNude_software_itself)的pix2pixHD(由英伟达提出)算法，更重要的是DeepNude背后通用的图像生成理论与实践研究。本资源包含[pix2pix](Pix2Pix), [CycleGAN](CycleGAN), UGATIT, [DCGAN](DCGAN), SinGAN, [VAE](Variational_Autoencoder), ALAE and mGANprior 等图像生成模型的 [TensorFlow2](https://www.tensorflow.org/) (Pytorch | PaddlePaddle) 实现。
 
 ---
 
@@ -212,6 +212,33 @@ We introduce SinGAN, an unconditional generative model that can be learned from 
 在这篇论文中，研究者介绍了一种无监督的生成模型 SinGAN，它以一种无条件约束的方式从单张自然图像中学习知识。经过训练，研究者的模型能捕捉图像块（patch）的内部分布，从而生成高质量、多样化的样本，并承载与训练图像相同的视觉内容。
 
 SinGAN 包含一个全卷积金字塔 GAN，金字塔的每一层负责学习不同比例的图像块分布。这样就能生成具有任意大小和横纵比的新样本，这种生成样本明显具有可变性，但同时又能保持真实图像的全局结构与精细纹理。与之前的单图像 GAN 相比，研究者的方法不仅能生成纹理图像，同时它还以一种无条件约束的方式生成。SinGAN 通过使用多尺度对抗训练方案，从多种尺度学习了图像块信息。这样一来，模型就可以生成新的真实图像样本，其中在创建新的目标属性和结构的同时还保留了原始的图像块分布信息。如上展示了不同尺度图像的生成效果。研究者在最后还表明，SinGAN 生成的图像经常被人类弄混，它们与真实图像没什么差别。
+
+### 8. ALAE
+
++ 论文 2020 paper [Adversarial Latent Autoencoders](https://arxiv.org/abs/2004.04467)
++ 代码 code [ALAE](https://github.com/podgorskiy/ALAE)
+
+**效果**
+
+![](https://user-images.githubusercontent.com/3229783/79670218-63080d80-818f-11ea-9e50-927b8af3e7b5.gif)
+
+Although studied extensively, the issues of whether they have the same generative power of GANs, or learn disentangled representations, have not been fully addressed. We introduce an autoencoder that tackles these issues jointly, which we call Adversarial Latent Autoencoder (ALAE). It is a general architecture that can leverage recent improvements on GAN training procedures.
+
+关于自编码器有两个疑问尚未得到解决：自编码器是否具备和 GAN 同等的生成能力？自编码器能否学习解耦表征？美国西弗吉尼亚大学的研究者提出一种新型自编码器 Adversarial Latent Autoencoder (ALAE)，试图解决以上问题。ALAE是一个通用架构，它能够利用近期GAN在训练方面的改进。研究者表示ALAE具备与GAN相当的生成能力，且能够学习解耦表征。
+
+### 9. mGANprior
+
++ 论文 2020 paper [Image Processing Using Multi-Code GAN Prior](https://arxiv.org/abs/1912.07116)
++ 主页 [mGANprior homepage](https://genforce.github.io/mganprior/)
++ 代码 code [mganprior](https://github.com/genforce/mganprior)
+
+**效果**
+
+![](paper_images/2020_Gujinjin_mGANprior_example.jpg)
+
+Despite the success of Generative Adversarial Networks (GANs) in image synthesis, applying trained GAN models to real image processing remains challenging. Previous methods typically invert a target image back to the latent space either by back-propagation or by learning an additional encoder. However, the reconstructions from both of the methods are far from ideal. In this work, we propose a novel approach, called mGANprior, to incorporate the well-trained GANs as effective prior to a variety of image processing tasks.
+
+为了让训练好的GAN能用于处理图像，现有方法尝试以重新反向传播（寻找合适的Z）或者添加一个额外的编码器encoder将图像映射到潜在空间。但多数情况下两者的重建并不理想。在这项工作中提出一种新的逆映射（image->Z）方法，将训练好的GAN作为一个有效的先验去处理多种图像处理任务。
 
 ---
 
