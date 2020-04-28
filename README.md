@@ -3,9 +3,9 @@ GAN evolution graph 2020.
 
 ![](paper_images/GAN_2020.png)
 
-This repository contains the pix2pixHD algorithms(proposed by NVIDIA) of [DeepNude](DeepNude_software_itself), and more importantly, the general image generation theory and practice behind DeepNude. This resource includes the TensorFlow2 (Pytorch | PaddlePaddle) implementation of image generation models such as [pix2pix](Pix2Pix), [CycleGAN](CycleGAN), UGATIT, [DCGAN](DCGAN), SinGAN, [VAE](Variational_Autoencoder), ALAE and mGANprior.
+This repository contains the pix2pixHD algorithms(proposed by NVIDIA) of [DeepNude](DeepNude_software_itself), and more importantly, the general image generation theory and practice behind DeepNude. This resource includes the TensorFlow2 (Pytorch | PaddlePaddle) implementation of image generation models such as [pix2pix](Pix2Pix), [CycleGAN](CycleGAN), UGATIT, [DCGAN](DCGAN), SinGAN, [VAE](Variational_Autoencoder), ALAE, mGANprior and StarGAN-v2.
 
-这个仓库包含[DeepNude](DeepNude_software_itself)的pix2pixHD(由英伟达提出)算法，更重要的是DeepNude背后通用的图像生成理论与实践研究。本资源包含[pix2pix](Pix2Pix), [CycleGAN](CycleGAN), UGATIT, [DCGAN](DCGAN), SinGAN, [VAE](Variational_Autoencoder), ALAE and mGANprior 等图像生成模型的 [TensorFlow2](https://www.tensorflow.org/) (Pytorch | PaddlePaddle) 实现。
+这个仓库包含[DeepNude](DeepNude_software_itself)的pix2pixHD(由英伟达提出)算法，更重要的是DeepNude背后通用的图像生成理论与实践研究。本资源包含[pix2pix](Pix2Pix), [CycleGAN](CycleGAN), UGATIT, [DCGAN](DCGAN), SinGAN, [VAE](Variational_Autoencoder), ALAE, mGANprior和StarGAN-v2等图像生成模型的 [TensorFlow2](https://www.tensorflow.org/) (Pytorch | PaddlePaddle) 实现。
 
 ---
 
@@ -239,6 +239,20 @@ Although studied extensively, the issues of whether they have the same generativ
 Despite the success of Generative Adversarial Networks (GANs) in image synthesis, applying trained GAN models to real image processing remains challenging. Previous methods typically invert a target image back to the latent space either by back-propagation or by learning an additional encoder. However, the reconstructions from both of the methods are far from ideal. In this work, we propose a novel approach, called mGANprior, to incorporate the well-trained GANs as effective prior to a variety of image processing tasks.
 
 为了让训练好的GAN能用于处理图像，现有方法尝试以重新反向传播（寻找合适的Z）或者添加一个额外的编码器encoder将图像映射到潜在空间。但多数情况下两者的重建并不理想。在这项工作中提出一种新的逆映射（image->Z）方法，将训练好的GAN作为一个有效的先验去处理多种图像处理任务。
+
+### 10. StarGAN v2
+
++ 论文 Clova Research 2020 paper [StarGAN v2: Diverse Image Synthesis for Multiple Domains](https://arxiv.org/abs/1912.01865)
++ 视频 [Video](https://youtu.be/0EVh5Ki4dIY)
++ 代码 code [stargan-v2](https://github.com/clovaai/stargan-v2)
+
+**效果**
+
+![](paper_images/2020_Clova_StarGAN_v2_example.jpg)
+
+A good image-to-image translation model should learn a mapping between different visual domains while satisfying the following properties: 1) diversity of generated images and 2) scalability over multiple domains. Existing methods address either of the issues, having limited diversity or multiple models for all domains. We propose StarGAN v2, a single framework that tackles both and shows significantly improved results over the baselines.
+
+一个好的图像到图像转换模型应该学习不同视觉域之间的映射，同时满足以下特性：1）生成图像的多样性和2）跨多个域的可伸缩性。现有的方法解决了这两个问题中的任何一个，对所有域都具有有限的多样性或多个模型。我们提出了StarGAN v2，这是一个可以同时解决这两个问题并在基线上显示出显著改进的结果的单一框架。
 
 ---
 
