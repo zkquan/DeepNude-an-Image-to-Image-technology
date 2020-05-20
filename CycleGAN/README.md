@@ -2,6 +2,7 @@
 > If you have interesting ideas or data, please contact me quickly at wangzichaochaochao@gmail.com .
 
 ![](https://github.com/yuanxiaosc/DeepNude-an-Image-to-Image-technology/raw/master/paper_images/2017_Zhu_CycleGAN_examples_horse2zebra.gif)
+
 **horse2zebra 马变斑马**
 
 CycleGAN uses a cyclic consistency loss function to facilitate model training without pairing data. For example, you only need to prepare thousands of photos of the source dataset and thousands of photos of the target dataset, and then CycleGAN (through the training model) can learn the relationship between the source image set apple and the target image set orange. Entering the apple after the training CycleGAN can generate oranges, and vice versa. The main advantage of CycleGAN is that it can learn the relationship between the source image set and the target image set without one-to-one mapping between the source image set apple and the target image set orange.
@@ -30,7 +31,7 @@ predefined_cyclegan_task_name_list = [
 ### Require
 
 + python 3+, e.g. python==3.6
-+ tensorflow version 2, e.g. tensorflow==2.0.0-beta1
++ tensorflow version 2, e.g. tensorflow==2.0.0
 + tensorflow-datasets
 
 ### Train Model

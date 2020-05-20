@@ -39,7 +39,7 @@ predefined_task_name_list = ["cityscapes", "edges2handbags", "edges2shoes", "fac
 ### Require
 
 + python 3+, e.g. python==3.6
-+ tensorflow version 2, e.g. tensorflow==2.0.0-beta1
++ tensorflow version 2, e.g. tensorflow==2.0.0
 + tensorflow-datasets
 
 ### Train Model

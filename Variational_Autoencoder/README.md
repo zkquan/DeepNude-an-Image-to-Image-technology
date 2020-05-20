@@ -31,7 +31,7 @@ CelebFaces Attributes (CelebA) Dataset https://www.kaggle.com/jessicali9530/cele
 ### Require
 
 + python 3+, e.g. python==3.6
-+ tensorflow version 2, e.g. tensorflow==2.0.0-beta1
++ tensorflow version 2, e.g. tensorflow==2.0.0
 + tensorflow-datasets
 
 ### Train Model
@@ -52,7 +52,7 @@ python inference_by_vae_model.py
 + [Introduction to variational autoencoders](https://tensorchiefs.github.io/bbs/files/vae.pdf)
 
 
-## VQ-VAE-2
+## 2019 VQ-VAE-2
 The above simple Convolutional Variational Autoencoder can only generate blurred face images. If you want to get better results, we recommend VQ-VAE-2, which can generate the following high-definition images.
 
 上述简单的卷积变分自编码器只能生成模糊的人脸图片，如果你想获得更好的效果，推荐使用VQ-VAE-2，它能生成如下的高清图像。
@@ -61,3 +61,5 @@ The above simple Convolutional Variational Autoencoder can only generate blurred
 
 + Paper [Generating Diverse High-Fidelity Images with VQ-VAE-2](https://arxiv.org/abs/1906.00446)
 + Code [vq-vae-2-pytorch](https://github.com/rosinality/vq-vae-2-pytorch)
++ Youtube [AI Creates Near Perfect Images Of People, Dogs and More](https://www.youtube.com/watch?v=xlrGOfvYcQc)
++ [Demo](https://app.wandb.ai/l2k2/sonnet-sonnet_examples/runs/jizpgd0o?workspace=user-l2k2)

@@ -27,7 +27,7 @@ CelebFaces Attributes (CelebA) Dataset https://www.kaggle.com/jessicali9530/cele
 ### Require
 
 + python 3+, e.g. python==3.6
-+ tensorflow version 2, e.g. tensorflow==2.0.0-beta1
++ tensorflow version 2, e.g. tensorflow==2.0.0
 + tensorflow-datasets
 
 ### Train Model
